@@ -53,11 +53,11 @@
 \subject{Assets management with FusionInventory and GLPI}
 \keywords{Assets management, Inventory, FusionInventory, GLPI}
 
-\date{\includegraphics[height=0.3cm]{./pics/cc-by-sa.png} ~ December 30, 2010}
+\date{\includegraphics[height=0.3cm]{./pics/cc-by-sa.png} ~ 6th February, 2011}
 \titlegraphic{}
 \subtitle{\includegraphics[width=0.9\linewidth]{./pics/wolf.png}}
 \institute{\includegraphics[height=1.2cm]{./pics/esquimaux-logo.png}}
-\author{ Fabrice Flore-Thebault \texttt{fabrice@esquimaux.be} }
+\author{ FusionInventory project }
 \logo{\includegraphics[height=1cm]{./pics/esquimaux-logo.png}}
 
 \begin{document}
@@ -69,92 +69,129 @@
 % \tableofcontents
 %\end{frame}
 
-\author{\href{http://esquimaux.be}{esquimaux.be}}
+\author{\href{http://www.FusionInventory.org}{FusionInventory.org}}
+
+\section{Overview}
 
 \begin{frame}
-
-\frametitle{About me}
+\frametitle{Global overview}
 
 \begin{itemize}
-
-\item sysadmin in the free software community
-\item themr0c on \href{http://identi.ca/themr0c}{identica} and  \href{http://twitter.com/themr0c}{twitter}
-\item involved in both projects, mainly in the documentation team 
-\item opensource consultant at \href{http://esquimaux.be}{esquimaux.be}
-\item \href{http://esquimaux.be}{esquimaux.be} is the walloon branch of \href{http://inuits.be}{inuits.be}, a belgian company specialized in opensource infrastructure and software development
+%
+\item here a schema
+%
 \end{itemize}
-
 \end{frame}
 
-\section{Assets management : full lifecycle}
+
+\section{Agent}
+
 %
-\subsection{Inventory of hardware and software}
+\subsection{Agent history}
 %-------------------------------------------------------------------
 \begin{frame}
-\frametitle{Inventory of hardware and software}
+\frametitle{Agent history}
 
 \begin{itemize}
 %
-\item collect data for a CMDB
-\item security : current installed software
-\item history of changes and incidents
-\item metrics to optimize resources
-\item facts to planify
-\item improve quality
+\item todo
 %
 \end{itemize}
 \end{frame}
 %-------------------------------------------------------------------
-\subsection{Connect to administrative informations}
+\subsection{the internal}
 %-------------------------------------------------------------------
 \begin{frame}
-\frametitle{Connect to administrative informations}
+\frametitle{The agent internal}
 %
 \begin{itemize}
 %
-\item warranty
-\item licences
-\item contracts
-\item legal issues
-\item finances
-\item reports
+\item todo 
 %
 \end{itemize}
 \end{frame}
+
+\subsection{task}
 %-------------------------------------------------------------------
-\section{Fusionventory - Inventory network assets}
+\begin{frame}
+\frametitle{Task}
+%
+\begin{itemize}
+%
+\item todo 
+%
+\end{itemize}
+\end{frame}
+
+
+
+\subsection{supported OS}
+%-------------------------------------------------------------------
+\begin{frame}
+\frametitle{supported OS}
+%
+\begin{itemize}
+%
+\item todo 
+%
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------
+\section{The server side: FusionInventory for GLPI}
 %
 \logo{\includegraphics[height=1cm]{./pics/fusioninventory-logo.png}}
 %
-\subsection{FusionInventory facts - fusioninventory.org}
+\subsection{History}
 %-------------------------------------------------------------------
 \begin{frame}
-\frametitle{FusionInventory facts - \href{http://fusioninventory.org}{fusioninventory.org}}
+\frametitle{A long long time ago}
 %
 \begin{itemize}
-\item GPLv2
-\item born at FOSDEM 2010, fusion of 2 projects : fork of OCSInventory Unix agent + Tracker plugin for GLPI
-\item agent : perl
-\item server : PHP
+\item Tracker 
 %
 \end{itemize}
 \end{frame}
-%-------------------------------------------------------------------
-\subsection{FusionInventory agent}
+
+\subsection{Internal}
 %-------------------------------------------------------------------
 \begin{frame}
-\frametitle{FusionInventory agent}
+\frametitle{GLPI plugin}
 %
 \begin{itemize}
-%
-\item unique agent for Linux, *BSD, Windows, MacOS X, Solaris, AIX, HP-UX
-\item perl based : modular and extensible
-\item distribution : sources, packages, prebuilt all in one tarballs, usb key
+\item FusionInventory for GLPI is ... a plugin for ... GLPI. Wait! What? 
 %
 \end{itemize}
 \end{frame}
+
 %-------------------------------------------------------------------
-\subsection{The inventories}
+\begin{frame}
+\frametitle{GLPI plugin}
+%
+\begin{itemize}
+\item PHP/MySQL
+%
+\end{itemize}
+\end{frame}
+
+\subsection{Data exchange}
+%-------------------------------------------------------------------
+\begin{frame}
+\frametitle{the protocol}
+%
+\begin{itemize}
+\item HTTPS everywhere! 
+%
+\end{itemize}
+\end{frame}
+
+
+
+%-------------------------------------------------------------------
+\section{What can I do with that?}
+%-------------------------------------------------------------------
+%-------------------------------------------------------------------
+\subsection{first, machine Inventory!}
 %-------------------------------------------------------------------
 \begin{frame}
 \frametitle{The inventories}
@@ -162,167 +199,151 @@
 \begin{itemize}
 %
 \item local - hardware including USB devices, screens
-\item local - software including antivirus, virtual machines
-\item local - compatible with OCSInventory server
-\item network discover with nmap, NETBIOS, SNMP
-\item SNMP - printers: pages counters, ink level, network connexions
-\item SNMP - network switches: CPU, memory usage, network connexions
-\item direct import to GLPI handle network ports
 %
 \end{itemize}
 \end{frame}
 %-------------------------------------------------------------------
-\subsection{Other tasks for the agent}
+\subsection{network discovery!}
 %-------------------------------------------------------------------
 
 \logo{\includegraphics[height=4cm]{./pics/fusioninventory-tasks.png}}
 
 \begin{frame}
-\frametitle{Other tasks for the agent}
+\frametitle{Identify devices on the network}
 %
 \begin{itemize}
 %
-\item wakeup
-\item inventory on demand
-\item wake on lan
-\item peer to peer files transfert
-\item custom tasks
+\item TODO
 %
 \end{itemize}
 \end{frame}
 %-------------------------------------------------------------------
-\subsection{LibFusionInventory}
+\subsection{switch inventory}
 %-------------------------------------------------------------------
 \logo{\includegraphics[height=1cm]{./pics/fusioninventory-logo.png}}
 
 \begin{frame}
-\frametitle{LibFusionInventory}
+\frametitle{Switch inventory}
 
 \begin{itemize}
 %
-\item PHP library
-\item communication with agents
-\item manage duplicate hardware
-\item to integrate into another product
+\item TODO
 %
 \end{itemize}
 \end{frame}
 %-------------------------------------------------------------------
-\subsection{FusionInventory for GLPI}
+\subsection{printer status}
 %-------------------------------------------------------------------
 
 \logo{\includegraphics[height=3.5cm]{./pics/fusioninventory-glpi.png}}
 
 \begin{frame}
-\frametitle{FusionInventory for GLPI}
+\frametitle{printer too!}
 
 \begin{itemize}
 
-\item inventory of computers, printers, switches
-\item discover unknown hardware
-\item planify tasks for agents
-\item for GLPI 0.72 : released \\ without computers inventory
-\item for GLPI 0.78 : beta in january
+\item TODO
 
 \end{itemize}
 \end{frame}
 %-------------------------------------------------------------------
-\section{GLPI - Assets management}
-%
-%\logo{\includegraphics[height=1cm]{./pics/glpi-logo.png}}
-\logo{\includegraphics[height=2.5cm]{./pics/glpi-welcome.png}}
-
-\subsection{GLPI facts - glpi-project.org}
+\subsection{Wake on LAN}
 %-------------------------------------------------------------------
 \begin{frame}
-\frametitle{GLPI facts - \href{http://glpi-project.org}{glpi-project.org}}
+\frametitle{Wake on LAN}
 \logo{\includegraphics[height=3.5cm]{./pics/glpi-config.png}}
 \begin{itemize}
 %
-\item GPLv2 PHP web application
-\item IndepNet association, mainly french developers
-\item worldwide usage, small to big business, administrations
-\item authentication delegation (LDAP, IMAP, CAS)
-\item strong separation of environments (entities)
-\item i18n (35 languages)
-\item data export
+\item TODO
 %
 \end{itemize}
 \end{frame}
 
 %-------------------------------------------------------------------
-\subsection{Assets inventory}
+\subsection{Software deployment}
 %-------------------------------------------------------------------
 \logo{\includegraphics[height=3.5cm]{./pics/glpi-inventory.png}}
 
 \begin{frame}
-\frametitle{Assets inventory}
+\frametitle{Software deployment}
 
 \begin{itemize}
 %
-\item data sources : OCSInventory-ng, FusionIventory server
-\item importation, synchronization
-\item normalisation with dictionaries
-\item plugins for other sources
+\item TODO
 %
 \end{itemize}
 \end{frame}
 %-------------------------------------------------------------------
-\subsection{Helpdesk}
+\subsection{Task Scheduling}
 %-------------------------------------------------------------------
 \logo{\includegraphics[height=3.5cm]{./pics/glpi-helpdesk.png}}
 \begin{frame}
-\frametitle{Helpdesk}
+\frametitle{Task Scheduling}
 %
 \begin{itemize}
 %
-\item simplified interface for helpdesk
-\item ITIL compliance for incidents, service requests
-\item business rules for tickets assignments
-\item custom multilingual notifications
+\item TODO
 %
 \end{itemize}
 \end{frame}
 %-------------------------------------------------------------------
-\subsection{Useful Plugins}
+\subsection{libFusionInventory}
 %-------------------------------------------------------------------
 \logo{\includegraphics[height=3.5cm]{./pics/glpi-helpdesk.png}}
 \begin{frame}
-\frametitle{Useful Plugins}
+\frametitle{libFusionInventory}
 %
 \begin{itemize}
 %
-\item OCS Import (Automatic synchronization with OCS)
-\item Manufacturers Import (Dell, HP, Fujistu-Siemens)
-\item Accounts inventory (passwords keeper)
-\item Data injection (CSV import)
-\item Financial reports
-\item PDF export
-\item ...
+\item TODO
 %
 \end{itemize}
 \end{frame}
 %
 
 %-------------------------------------------------------------------
-\subsection{New version : 0.78}
+\section{Roadmap}
 %-------------------------------------------------------------------
 \logo{\includegraphics[height=3.5cm]{./pics/glpi-doc.png}}
 %
 \begin{frame}
-\frametitle{Actual version : 0.78}
+\frametitle{Our roadmap}
 %
 \begin{itemize}
 %
-\item entity based management enhanced (notifications, administrative closing, business rules, authentification)
-\item helpdesk enhanced : tickets lifecycle, impact/urgency/priority matrix, ITIL
-\item new database, framework, plugins API
-\item LDAP enhancements
-\item user interface polished
-\item user documentation in french
+\item TODO
 %
 \end{itemize}
 \end{frame}
+
+\section{Community}
+%-------------------------------------------------------------------
+\logo{\includegraphics[height=3.5cm]{./pics/glpi-doc.png}}
+%
+\begin{frame}
+\frametitle{Our roadmap}
+%
+\begin{itemize}
+%
+\item TODO
+%
+\end{itemize}
+\end{frame}
+
+\section{Question?}
+%-------------------------------------------------------------------
+\logo{\includegraphics[height=3.5cm]{./pics/glpi-doc.png}}
+%
+\begin{frame}
+\frametitle{Question?}
+%
+\begin{itemize}
+%
+\item TODO
+%
+\end{itemize}
+\end{frame}
+
 %-------------------------------------------------------------------
 %\subsection{future}
 %-------------------------------------------------------------------
