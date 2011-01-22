@@ -27,8 +27,6 @@
 \author{ FusionInventory project }
 \logo{\includegraphics[height=1.2cm]{./pics/fusioninventory-logo-small.png}}
 
-%\setcounter{tocdepth}{1}
-
 \AtBeginSubsection[] % Do nothing for \subsection*
 {
     \begin{frame}<beamer>
@@ -58,8 +56,6 @@
 
 \author{\href{http://www.FusionInventory.org}{FusionInventory.org}}
 
-\tableofcontents[pausesections]
-
 \section{Overview}
 
 \begin{frame}
@@ -75,221 +71,13 @@
 
 \section{Agent}
 
-%
-\subsection{Agent history}
-%-------------------------------------------------------------------
-\begin{frame}
-\frametitle{Agent history}
-
-\begin{itemize}
-%
-\item todo
-%
-\end{itemize}
-\end{frame}
-%-------------------------------------------------------------------
-\subsection{the internal}
-%-------------------------------------------------------------------
-\begin{frame}
-\frametitle{The agent internal}
-%
-\begin{itemize}
-%
-\item todo 
-%
-\end{itemize}
-\end{frame}
-
-\subsection{task}
-%-------------------------------------------------------------------
-\begin{frame}
-\frametitle{Task}
-%
-\begin{itemize}
-%
-\item todo 
-%
-\end{itemize}
-\end{frame}
-
-
-
-\subsection{supported OS}
-%-------------------------------------------------------------------
-\begin{frame}
-\frametitle{supported OS}
-%
-\begin{itemize}
-%
-\item todo 
-%
-\end{itemize}
-\end{frame}
-
+\include{agent.tex}
 %-------------------------------------------------------------------
 \section{The server side: FusionInventory for GLPI}
-%
-%\logo{\includegraphics[height=1cm]{./pics/fusioninventory-logo.png}}
-%
-\subsection{History}
-%-------------------------------------------------------------------
-\begin{frame}
-\frametitle{A long long time ago}
-%
-\begin{itemize}
-\item Tracker 
-%
-\end{itemize}
-\end{frame}
-
-\subsection{Internal}
-%-------------------------------------------------------------------
-\begin{frame}
-\frametitle{GLPI plugin}
-%
-\begin{itemize}
-\item FusionInventory for GLPI is ... a plugin for ... GLPI. Wait! What? 
-%
-\end{itemize}
-\end{frame}
-
-%-------------------------------------------------------------------
-\begin{frame}
-\frametitle{GLPI plugin}
-%
-\begin{itemize}
-\item PHP/MySQL
-%
-\end{itemize}
-\end{frame}
-
-\subsection{Data exchange}
-%-------------------------------------------------------------------
-\begin{frame}
-\frametitle{the protocol}
-%
-\begin{itemize}
-\item HTTPS everywhere! 
-%
-\end{itemize}
-\end{frame}
-
-
-
+\include{server.tex}
 %-------------------------------------------------------------------
 \section{What can I do with that?}
-%-------------------------------------------------------------------
-%-------------------------------------------------------------------
-\subsection{first, machine Inventory!}
-%-------------------------------------------------------------------
-\begin{frame}
-\frametitle{The inventories}
-
-\begin{itemize}
-%
-\item local - hardware including USB devices, screens
-%
-\end{itemize}
-\end{frame}
-%-------------------------------------------------------------------
-\subsection{network discovery!}
-%-------------------------------------------------------------------
-
-\logo{\includegraphics[height=4cm]{./pics/fusioninventory-tasks.png}}
-
-\begin{frame}
-\frametitle{Identify devices on the network}
-%
-\begin{itemize}
-%
-\item TODO
-%
-\end{itemize}
-\end{frame}
-%-------------------------------------------------------------------
-\subsection{switch inventory}
-%-------------------------------------------------------------------
-%\logo{\includegraphics[height=1cm]{./pics/fusioninventory-logo.png}}
-
-\begin{frame}
-\frametitle{Switch inventory}
-
-\begin{itemize}
-%
-\item TODO
-%
-\end{itemize}
-\end{frame}
-%-------------------------------------------------------------------
-\subsection{printer status}
-%-------------------------------------------------------------------
-
-\logo{\includegraphics[height=3.5cm]{./pics/fusioninventory-glpi.png}}
-
-\begin{frame}
-\frametitle{printer too!}
-
-\begin{itemize}
-
-\item TODO
-
-\end{itemize}
-\end{frame}
-%-------------------------------------------------------------------
-\subsection{Wake on LAN}
-%-------------------------------------------------------------------
-\begin{frame}
-\frametitle{Wake on LAN}
-\logo{\includegraphics[height=3.5cm]{./pics/glpi-config.png}}
-\begin{itemize}
-%
-\item TODO
-%
-\end{itemize}
-\end{frame}
-
-%-------------------------------------------------------------------
-\subsection{Software deployment}
-%-------------------------------------------------------------------
-\logo{\includegraphics[height=3.5cm]{./pics/glpi-inventory.png}}
-
-\begin{frame}
-\frametitle{Software deployment}
-
-\begin{itemize}
-%
-\item TODO
-%
-\end{itemize}
-\end{frame}
-%-------------------------------------------------------------------
-\subsection{Task Scheduling}
-%-------------------------------------------------------------------
-\logo{\includegraphics[height=3.5cm]{./pics/glpi-helpdesk.png}}
-\begin{frame}
-\frametitle{Task Scheduling}
-%
-\begin{itemize}
-%
-\item TODO
-%
-\end{itemize}
-\end{frame}
-%-------------------------------------------------------------------
-\subsection{libFusionInventory}
-%-------------------------------------------------------------------
-\logo{\includegraphics[height=3.5cm]{./pics/glpi-helpdesk.png}}
-\begin{frame}
-\frametitle{libFusionInventory}
-%
-\begin{itemize}
-%
-\item TODO
-%
-\end{itemize}
-\end{frame}
-%
-
+\include{purpose.tex}
 %-------------------------------------------------------------------
 \section{Roadmap}
 %-------------------------------------------------------------------
