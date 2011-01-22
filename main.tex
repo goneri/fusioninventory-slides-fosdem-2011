@@ -27,6 +27,30 @@
 \author{ FusionInventory project }
 \logo{\includegraphics[height=1cm]{./pics/esquimaux-logo.png}}
 
+%\setcounter{tocdepth}{1}
+
+\AtBeginSubsection[] % Do nothing for \subsection*
+{
+  \begin{frame}<beamer>
+      \frametitle{Outline}
+% Only list the subsection of the current section
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+% http://tex.stackexchange.com/questions/4102/setting-setcountertocdepth-for-an-individual-chapter
+          \tableofcontents[currentsection,currentsubsection]
+            \end{frame}
+            }
+
+\AtBeginSection[] % Do nothing for \section*
+{
+    \begin{frame}<beamer>
+        \frametitle{Outline}
+% Only list the section
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+    \tableofcontents[currentsection]
+        \end{frame}
+}
+
+
 \begin{document}
 
 \frame[plain]{\titlepage}
@@ -37,6 +61,8 @@
 %\end{frame}
 
 \author{\href{http://www.FusionInventory.org}{FusionInventory.org}}
+
+\tableofcontents[pausesections]
 
 \section{Overview}
 
