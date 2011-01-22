@@ -4,7 +4,7 @@
     \usetheme{PaloAlto}
     \usecolortheme{seagull}
     \setbeamercovered{transparent}
-    }
+}
 
 \usepackage[english]{babel}
 \usepackage{times}
@@ -31,21 +31,21 @@
 
 \AtBeginSubsection[] % Do nothing for \subsection*
 {
-  \begin{frame}<beamer>
-      \frametitle{Outline}
-% Only list the subsection of the current section
-  \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
-% http://tex.stackexchange.com/questions/4102/setting-setcountertocdepth-for-an-individual-chapter
-          \tableofcontents[currentsection,currentsubsection]
-            \end{frame}
-            }
+    \begin{frame}<beamer>
+        \frametitle{Outline}
+    % Only list the subsection of the current section
+        \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+    % http://tex.stackexchange.com/questions/4102/setting-setcountertocdepth-for-an-individual-chapter
+        \tableofcontents[currentsection,currentsubsection]
+        \end{frame}
+}
 
 \AtBeginSection[] % Do nothing for \section*
 {
     \begin{frame}<beamer>
         \frametitle{Outline}
-% Only list the section
-\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+    % Only list the section
+        \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
     \tableofcontents[currentsection]
         \end{frame}
 }
@@ -346,7 +346,7 @@
 \tableofcontents
 %\includegraphics[width=\columnwidth]{./pics/wolf.png} 
 %\\
-%\includegraphics[height=1.5cm]{./pics/esquimaux-logo.png}
+        %\includegraphics[height=1.5cm]{./pics/esquimaux-logo.png}
 
-\end{frame}
-\end{document}
+        \end{frame}
+        \end{document}
