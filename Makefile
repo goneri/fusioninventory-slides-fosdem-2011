@@ -13,7 +13,7 @@
 # run pdflatex two times or the table of contents does not appear
 all: main.pdf
 
-main.pdf: main.tex
+main.pdf: main.tex agent.tex server.tex purpose.tex
 	export TEXINPUTS=$$TEXINPUTS:.:`pwd`/beamermindist/:`pwd`/beamermindist/themes; \
 	export TEXINPUTS=$$TEXINPUTS:`pwd`/beamermindist/themes/color; \
 	export TEXINPUTS=$$TEXINPUTS:`pwd`/beamermindist/themes/font ; \
@@ -36,7 +36,7 @@ clean:
 	touch main.tex
 
 # same thing : run latex two times or the table of contents does not appear
-main.ps: main.tex
+main.ps: main.tex agent.tex server.tex purpose.tex
 	export TEXINPUTS=$$TEXINPUTS:.:`pwd`/beamermindist/:`pwd`/beamermindist/themes; \
 	export TEXINPUTS=$$TEXINPUTS:`pwd`/beamermindist/themes/color; \
 	export TEXINPUTS=$$TEXINPUTS:`pwd`/beamermindist/themes/font ; \
