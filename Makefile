@@ -9,6 +9,8 @@
 
 # main target : create a pdf file
 
+.PHONY    : view clean veryclean
+
 # Temporary file
 AUX    = $(wildcard *.aux *.log *.nav *.out *.snm *.toc)
 BACKUP = $(wildcard *~ *.bak)
