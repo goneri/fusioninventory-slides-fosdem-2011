@@ -11,6 +11,9 @@
 
 .PHONY    : view clean veryclean
 
+# Commands
+PDFLATEX = pdflatex
+
 # Temporary file
 AUX    = $(wildcard *.aux *.log *.nav *.out *.snm *.toc)
 BACKUP = $(wildcard *~ *.bak)
@@ -20,15 +23,8 @@ FINAL  = $(wildcard *.pdf)
 all: main.pdf
 
 main.pdf: main.tex agent.tex server.tex purpose.tex
-	export TEXINPUTS=$$TEXINPUTS:.:`pwd`/beamermindist/:`pwd`/beamermindist/themes; \
-	export TEXINPUTS=$$TEXINPUTS:`pwd`/beamermindist/themes/color; \
-	export TEXINPUTS=$$TEXINPUTS:`pwd`/beamermindist/themes/font ; \
-	export TEXINPUTS=$$TEXINPUTS:`pwd`/beamermindist/themes/inner; \
-	export TEXINPUTS=$$TEXINPUTS:`pwd`/beamermindist/themes/outer; \
-	export TEXINPUTS=$$TEXINPUTS:`pwd`/beamermindist/themes/theme; \
-	export TEXINPUTS=$$TEXINPUTS:`pwd`/beamermindist/art; \
-       	export GS_OPTIONS="-sPAPERSIZE=a4"; \
-	pdflatex main.tex && pdflatex main.tex
+	$(PDFLATEX) $<
+	$(PDFLATEX) $<
 	@echo "-> make view"
 
 view: main.pdf
