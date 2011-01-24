@@ -1,7 +1,7 @@
 \documentclass{beamer}
 \mode <presentation>
 {
-    \usetheme{PaloAlto}
+    \usetheme{Antibes}
     \usecolortheme{crane}
     \setbeamercovered{transparent}
 }
@@ -26,17 +26,6 @@
 \institute{\includegraphics[height=4.2cm]{./pics/fusioninventory-logo.pdf}}
 \author{ FusionInventory project }
 \logo{\includegraphics[height=0.7cm]{./pics/fusioninventory-logo.pdf}}
-
-\AtBeginSubsection[] % Do nothing for \subsection*
-{
-    \begin{frame}<beamer>
-        \frametitle{Outline}
-    % Only list the subsection of the current section
-        \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
-    % http://tex.stackexchange.com/questions/4102/setting-setcountertocdepth-for-an-individual-chapter
-        \tableofcontents[currentsection,currentsubsection]
-        \end{frame}
-}
 
 \AtBeginSection[] % Do nothing for \section*
 {
