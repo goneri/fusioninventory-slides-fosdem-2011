@@ -9,6 +9,10 @@
 
 # main target : create a pdf file
 
+# Temporary file
+AUX    = $(wildcard *.aux *.log *.nav *.out *.snm *.toc)
+BACKUP = $(wildcard *~ *.bak)
+FINAL  = $(wildcard *.pdf)
 
 # run pdflatex two times or the table of contents does not appear
 all: main.pdf
@@ -29,8 +33,10 @@ view: main.pdf
 	see main.pdf
 
 clean:
-	rm -f main.out main.aux main.toc main.log main.nav main.snm
-	touch main.tex
+	$(RM) $(AUX)
+
+veryclean: clean
+	$(RM) $(BACKUP) $(FINAL)
 
 # use "make touch" to get cross references right
 touch:
