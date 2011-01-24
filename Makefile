@@ -1,14 +1,3 @@
-# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-#  latex beamer template makefile
-#  this file is part of kdissert templates
-#  http://freehackers.org/~tnagy/kdissert/index.html
-#  created by Thomas Nagy <tnagy2^8@yahoo.fr, 2004
-#  permission is granted to distribute modifications and
-#  copies of this file without restrictions
-#
-
-# main target : create a pdf file
-
 .PHONY    : view clean veryclean
 
 # Commands
@@ -19,9 +8,10 @@ AUX    = $(wildcard *.aux *.log *.nav *.out *.snm *.toc)
 BACKUP = $(wildcard *~ *.bak)
 FINAL  = $(wildcard *.pdf)
 
-# run pdflatex two times or the table of contents does not appear
+# main target : create a pdf file
 all: main.pdf
 
+# run pdflatex two times or the table of contents does not appear
 main.pdf: main.tex agent.tex server.tex purpose.tex
 	$(PDFLATEX) $<
 	$(PDFLATEX) $<
