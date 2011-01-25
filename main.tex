@@ -17,6 +17,7 @@
 %\setbeamercolor{background canvas}{bg=\includegraphics[width=\textwidth]{./pics/wolf.png}}
 
 \title{Assets management with~FusionInventory~and~GLPI}
+\author{\href{http://www.FusionInventory.org}{FusionInventory.org}}
 \subject{Assets management with FusionInventory and GLPI}
 \keywords{Assets management, Inventory, FusionInventory, GLPI}
 
@@ -31,10 +32,8 @@
 {
     \begin{frame}<beamer>
         \frametitle{Outline}
-    % Only list the section
-        \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
-    \tableofcontents[currentsection]
-        \end{frame}
+        \tableofcontents[currentsection]
+    \end{frame}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -43,124 +42,117 @@
 
 \frame[plain]{\titlepage}
 
-\author{\href{http://www.FusionInventory.org}{FusionInventory.org}}
 
 \section{Overview}
 
 \begin{frame}
-\frametitle{Global overview}
+    \frametitle{Global overview}
 
-\begin{itemize}
-%
-\item here a schema
-%
-\end{itemize}
+    \begin{itemize}
+        \item here a schema
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{A long long time ago}
-%
-Tracker was a GLPI extension with a Perl agent.
+    \frametitle{A long long time ago}
 
-It goal was simple: just “SNMP” inventory
-\includegraphics[height=2.5cm]{./pics/frog1.pdf}
+    Tracker was a GLPI extension with a Perl agent.
 
+    It goal was simple: just “SNMP” inventory
+    \includegraphics[height=2.5cm]{./pics/frog1.pdf}
 \end{frame}
 
 \begin{frame}
-\frametitle{A long long time ago again}
-%
-OCS Inventory Agent for UNIX was an inventory agent that can't do SNMP.
+    \frametitle{A long long time ago again}
+    
+    OCS Inventory Agent for UNIX was an inventory agent without SNMP support.
 
-\includegraphics[height=2.5cm]{./pics/frog2.pdf}
-
+    \includegraphics[height=2.5cm]{./pics/frog2.pdf}
 \end{frame}
 
 \begin{frame}
-\frametitle{And they kissed}
-%
-And they did some kind of fusion...
-\includegraphics[height=6.5cm]{./pics/explode.jpg}
-
+    \frametitle{And they kissed}
+    
+    And they did some kind of fusion...
+    \includegraphics[height=6.5cm]{./pics/explode.jpg}
 \end{frame}
 
+\section{The code}
+
+\subsection{Client side}
 \include{agent}
-%-------------------------------------------------------------------
-\section{The server side: FusionInventory for GLPI}
+
+\subsection{Server side}
 \include{server}
-%-------------------------------------------------------------------
-\section{What can I do with that?}
+
+\subsection{Use cases}
 \include{purpose}
-%-------------------------------------------------------------------
-\section{Roadmap}
-%-------------------------------------------------------------------
+
+\section{The project}
+
+\subsection{History}
+
+\subsection{Future}
+
 \logo{\includegraphics[height=3.5cm]{./pics/glpi-doc.png}}
 %
 \begin{frame}
-\frametitle{Our roadmap}
-%
-\begin{itemize}
-%
-\item TODO
-%
-\end{itemize}
+    \frametitle{Our roadmap}
+    %
+    \begin{itemize}
+        \item TODO
+    \end{itemize}
 \end{frame}
 
-\section{Community}
+\subsection{Community}
+
 \begin{frame}
-\frametitle{The project workflow}
-%%-------------------------------------------------------------------
-%%\logo{\includegraphics[height=3.5cm]{./pics/glpi-doc.png}}
-FusionInventory is a community driven project.
+    \frametitle{The project workflow}
+    %%-------------------------------------------------------------------
+    %%\logo{\includegraphics[height=3.5cm]{./pics/glpi-doc.png}}
+    FusionInventory is a community driven project.
 
-\begin{itemize}
-
-\item active mailing lists
-\item IRC: \#FusionInventory on FreeNode
-\item public Forge, Git repositories, etc
-
-\end{itemize}
-%%
+    \begin{itemize}
+        \item active mailing lists
+        \item IRC: \#FusionInventory on FreeNode
+        \item public Forge, Git repositories, etc
+    \end{itemize}
 \end{frame}
+
 \begin{frame}
-\frametitle{Who}
+    \frametitle{Who}
 
-We are about 10 people involved in the project.
-\pause
-Guess what!
-\pause
-We are looking for people to JOIN US! :D
-
+    We are about 10 people involved in the project.
+    \pause
+    Guess what!
+    \pause
+    We are looking for people to JOIN US! :D
 \end{frame}
+
 \begin{frame}
-
-\frametitle{Our roadmap}
-%
-\begin{itemize}
-%
-\item TODO
-%
-\end{itemize}
+    \frametitle{Our roadmap}
+    %
+    \begin{itemize}
+        \item TODO
+    \end{itemize}
 \end{frame}
 
-\section{Question?}
-%-------------------------------------------------------------------
+\section{Conclusion}
+
 \logo{\includegraphics[height=3.5cm]{./pics/glpi-doc.png}}
 %
 \begin{frame}
-\frametitle{Question?}
-%
-\begin{itemize}
-%
-\item TODO
-%
-\end{itemize}
+    \frametitle{Question?}
+    
+    \begin{itemize}
+        \item TODO
+    \end{itemize}
 \end{frame}
 
 %\setbeamertemplate{headline}{\includegraphics[width=\paperwidth, height=2cm, clip=true]{./pics/header.png}}
 %\begin{frame}[plain]
 \begin{frame}[shrink=20]{Outline}
 
-\tableofcontents
+    \tableofcontents
 \end{frame}
 \end{document}
