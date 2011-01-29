@@ -21,7 +21,7 @@ view: main.pdf
 	see main.pdf
 
 clean:
-	$(RM) $(AUX)
+	$(RM) $(AUX) main.pdf
 
 veryclean: clean
 	$(RM) $(BACKUP) $(FINAL)
