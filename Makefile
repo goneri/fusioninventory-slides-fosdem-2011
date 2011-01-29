@@ -4,7 +4,7 @@
 PDFLATEX = pdflatex
 
 # Temporary file
-AUX    = $(wildcard *.aux *.log *.nav *.out *.snm *.toc)
+AUX    = $(wildcard *.aux *.log *.nav *.out *.snm *.toc *~)
 BACKUP = $(wildcard *~ *.bak)
 FINAL  = $(wildcard *.pdf)
 
