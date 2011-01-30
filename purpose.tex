@@ -1,9 +1,18 @@
 \begin{frame}
     \frametitle{The inventories}
 
-    \begin{itemize}
-        \item local - hardware including USB devices, screens
-    \end{itemize}
+Local inventory of the machine including:
+    \begin{description}
+        \item[BIOS], serial numbers, UUID, etc local
+        \item[Memory], memory slot, size, etc
+        \item[CPU], frequency, name, manufacturer, etc
+        \item[Software], apt-get, yum, Windows software, BSD pkg, etc
+        \item[Harddrive], serial number, manufacturer, etc
+        \item[Partition], etc
+        \item[Virtual Machine], libvirt, xen, etc
+        \item[USB devices], phone, USB key, etc
+    \end{description}
+\href{http://search.cpan.org/dist/FusionInventory-Agent/lib/FusionInventory/Agent/XML/Query/Inventory.pm}{A complet list of the fields is avalaible.}
 \end{frame}
 
 \begin{frame}
