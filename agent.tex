@@ -21,22 +21,26 @@
     \end{center}
     \frametitle{use Perl Luke!}
 
-    We choose to use only Perl on the agent side.
+    We choose to use Perl on the agent side.
     \begin{itemize}
         \item portable
         \item reliable
-        \item versatil
+        \item versatile
+        \item stable API, Oh my!
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{HTTP/HTTPS}
+    \frametitle{Agent push}
 
     \includegraphics[height=6.0cm]{pics/https.pdf}
+
+    XML over HTTP
+
 \end{frame}
 
 \begin{frame}
-    \frametitle{PUSH/PULL}
+    \frametitle{Server pull}
     \includegraphics[height=4.0cm]{pics/http-server.png}
 
     thanks to an embedded http server agent get updated by the server or retrieve itself (PULL) request.
@@ -45,18 +49,93 @@
 \begin{frame}
     \frametitle{Task}
     %
-    Not only for local machine inventory. The agent supports different "task".
+    Not only for local machine inventory. The agent supports different "tasks".
+
+    \pause
+    \begin{itemize}
+
+        \item Network discovery
+        \item Remote inventory
+        \item Software deployment
+        \item Wake On Lan
+        \item ...
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{The inventories}
+
+    \begin{description}
+        \item[BIOS] serial numbers, UUID, etc local
+        \item[Memory] memory slot, size, etc
+        \item[CPU] frequency, name, manufacturer, etc
+        \item[Software] apt-get, yum, Windows software, BSD pkg, etc
+        \item[Harddrive] serial number, manufacturer, etc
+        \item[Partition] etc
+        \item[Virtual Machine] libvirt, xen, etc
+        \item[USB devices] phone, USB key, etc
+        \item[etc] \href{http://search.cpan.org/dist/FusionInventory-Agent/lib/FusionInventory/Agent/XML/Query/Inventory.pm}{see the list on Internet.}
+    \end{description}
+
+    It's easy to add new information. Just ask us or submit patches!
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Network discovery}
+
+    \begin{itemize}
+        \item TODO
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Remote inventory}
+
+    \begin{block}{Network devices}
+        \begin{itemize}
+            \item serial number, firmware, ...
+            \item ports mapping
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Network printers}
+        \begin{itemize}
+            \item serial number, firmware, ...
+            \item cartridge ink level
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Wake on LAN}
+
+    \begin{itemize}
+        \item TODO
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Software deployment}
+
+    \begin{itemize}
+        \item TODO
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{supported OS (1/2)}
-    Perl runs everywhere.
+
+    Perl runs everywhere
+
     \pause
-    Basicaly to do a portage of the agent we
-    \begin{itemize}
-        \item extend the Inventory modules to collect information
-        \item and, hum, well, that's all. We're done :D
-    \end{itemize}
+
+    \begin{block}{FusionInventory Portage for dummies}
+        \begin{itemize}
+            \item extend the Inventory modules to collect information
+            \item and, hum, well, that's all. We're done :D
+        \end{itemize}
+    \end{block}
 \end{frame}
 
 \begin{frame}
@@ -73,7 +152,7 @@
     \end{itemize}
 
 
-    \uncover<8->{\href{http://forge.fusioninventory.org/projects/fusioninventory-agent/wiki/Agent\_supportedplateforms}{A complet list is avalaible on the website.}}
+    \uncover<8->{\href{http://forge.fusioninventory.org/projects/fusioninventory-agent/wiki/Agent\_supportedplateforms}{A complete list is avallable on the website}}
 
 \includegraphics[height=0.5cm]{pics/logos/aix.png}
 \includegraphics[height=0.5cm]{pics/logos/fedora.png}
@@ -96,17 +175,23 @@
 \end{frame}
  
 \begin{frame}
+    \frametitle{What else?}
+
     \begin{center}
     \includegraphics[height=4.0cm]{pics/whatelse.jpg}
     \end{center}
-    \frametitle{What else!}
 
-    3.0 branch in active development
-    \begin{description}
-        \item[code clean up] large test-suite, POE, etc
-        \item[smaller memory foot print]
-        \item[architecture changes] various independent programs
-        \end{description}
+    \pause
+
+    \begin{block}{3.0 branch in active development}
+        \begin{itemize}
+            \item code clean up\\
+            {\small larger test-suite, modern perl}
+            \item architecture changes\\
+            {\small event-driven programming, various executable}
+            \item smaller memory footprint
+        \end{itemize}
+    \end{block}
 \end{frame}
 
 
