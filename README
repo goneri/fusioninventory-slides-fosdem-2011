@@ -1,0 +1,9 @@
+= build =
+
+To build these slides on Debian, you need these packages:
+  texlive-latex-recommended latex-beamer texlive-latex-extra
+
+To start the build, just use "make".
+
+= about =
+Homesite: http://www.FusionInventory.org
