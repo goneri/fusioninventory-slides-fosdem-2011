@@ -31,10 +31,10 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Agent push}
+    \frametitle{Agent pull}
 
 
-    \includegraphics[height=4.0cm]{pics/kung-fu-panda.jpg}
+    \includegraphics[height=5.0cm]{pics/kung-fu-panda.jpg}
 
 
     AKA: The agent hits first!
@@ -42,12 +42,14 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Server pull}
+    \frametitle{Server push}
+
+    Just a trigger that awake the agent.
+
 
     \includegraphics[height=5.0cm]{pics/double-kick.jpg}
 
-
-    The server hits the agents first! \small{and the agents hit back!}
+    The server hits the agents first! Then the agents hit back!
 
 \end{frame}
 
@@ -71,15 +73,15 @@
     \frametitle{The inventories}
 
     \begin{description}
-        \item[BIOS] serial numbers, UUID, etc local
-        \item[Memory] memory slot, size, etc
-        \item[CPU] frequency, name, manufacturer, etc
-        \item[Software] apt-get, yum, Windows software, BSD pkg, etc
-        \item[Harddrive] serial number, manufacturer, etc
-        \item[Partition] etc
-        \item[Virtual Machine] libvirt, xen, etc
-        \item[USB devices] phone, USB key, etc
-        \item[etc] \href{http://search.cpan.org/dist/FusionInventory-Agent/lib/FusionInventory/Agent/XML/Query/Inventory.pm}{see the list on Internet.}
+        \item[BIOS] serial numbers, UUID, ... local
+        \item[Memory] memory slot, size, ...
+        \item[CPU] frequency, name, manufacturer, ...
+        \item[Software] apt-get, yum, Windows software, BSD pkg, ...
+        \item[Harddrive] serial number, manufacturer, ...
+        \item[Partition] ...
+        \item[Virtual Machine] libvirt, xen, ...
+        \item[USB devices] phone, USB key, ...
+        \item[...] \href{http://search.cpan.org/dist/FusionInventory-Agent/lib/FusionInventory/Agent/XML/Query/Inventory.pm}{see the list on Internet.}
     \end{description}
 
     It's easy to add new information. Just ask us or submit patches!
@@ -90,17 +92,24 @@
     \frametitle{Network discovery}
 
     FusionInventory can import basic network inventory in GLPI
+    \begin{block}{What?}
     \begin{itemize}
         \item hostname
         \item mac address
         \item IP address
-        \item serial number through SNMP
-        \item Windows domain
+        \item serial number
+        \item Windows user and domain
     \end{itemize}
+    \end{block}
+
+    \begin{block}{How?}
+    At this stage we collect information with nmap, netbios and SNMP query.
+    \end{block}
+
 \end{frame}
 
 \begin{frame}
-    \frametitle{Remote inventory}
+    \frametitle{Remote SNMP inventory}
 
     \begin{block}{Network devices}
         \begin{itemize}
@@ -113,6 +122,7 @@
         \begin{itemize}
             \item serial number, firmware, ...
             \item cartridge ink level
+            \item page counter
         \end{itemize}
     \end{block}
 \end{frame}
@@ -120,18 +130,46 @@
 \begin{frame}
     \frametitle{Wake on LAN}
 
+    \begin{block}{What?}
     \begin{itemize}
-        \item wake the computer up
-        \item send the Magic Packet from an agent in the same network
+        \item awake computer.
     \end{itemize}
+    \end{block}
+
+\pause
+
+    \begin{block}{How?}
+    send the Magic Packet from an agent in the same network
+    \begin{itemize}
+        \item send true ethernet packet
+        \item UDP packet still possible
+    \end{itemize}
+    \end{block}
+
+\pause
+
+    \begin{block}{Benefit}
+    \begin{itemize}
+        \item no firewall issue
+        \item nor special routage rule needed
+    \end{itemize}
+    \end{block}
+
 \end{frame}
 
 \begin{frame}
     \frametitle{Software deployment}
 
+    \begin{block}{What?}
+    OCS software deployment support featuring peer to peer support
+    \end{block}
+
+    \begin{block}{Benefit}
     \begin{itemize}
-        \item TODO
+        \item no proxy nor mirror
+        \item bandwidth friendly
     \end{itemize}
+    \end{block}
 \end{frame}
 
 \begin{frame}
@@ -181,50 +219,48 @@
 \includegraphics[height=0.5cm]{pics/logos/redhat.png}
 \includegraphics[height=0.5cm]{pics/logos/windows.jpg}
 \includegraphics[height=0.5cm]{pics/logos/dragonflybsd.png}
+\includegraphics[height=0.5cm]{pics/logos/mageia.png}
 
 
 
 \end{frame}
+
+\begin{frame}
+    \frametitle{Agent installation}
+
+
+    \begin{block}{different options}
+        \begin{itemize}
+            \item Distribution packages \small{(Debian, Fedora, EPEL, Ubuntu, Mageia, ...)}
+            \item Windows installer (GPO, psexec, ...)
+            \item static prebuilt packages, untar and run \small{(53 differents system so far)}
+            \item tarball or CPAN installation
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
 
 
 \begin{frame}
     \frametitle{Server?}
 
-    \pause
-
     \begin{block}{3 different servers}
-        \begin{description}
+        \begin{itemize}
             \item FusionInventory for GLPI
             \item Uranos
             \item OCS Inventory NG
-        \end{description}
+        \end{itemize}
     \end{block}
-
-    \begin{block}{server less}
-        local mode is also possible.
-    \end{block}
-\end{frame}
-
-
-
-\begin{frame}
-    \frametitle{What else?}
-
-    \begin{center}
-    \includegraphics[height=4.0cm]{pics/whatelse.jpg}
-    \end{center}
 
     \pause
 
-    \begin{block}{3.0 branch in active development}
-        \begin{itemize}
-            \item code clean up\\
-            {\small larger test-suite, modern perl}
-            \item architecture changes\\
-            {\small event-driven programming, various executable}
-            \item smaller memory footprint
-        \end{itemize}
+
+    \begin{block}{server less}
+        local mode is also possible for inventory
     \end{block}
 \end{frame}
+
+
 
 
