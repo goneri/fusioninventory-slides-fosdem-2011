@@ -54,9 +54,9 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Task}
+    \frametitle{Tasks}
     %
-    Not only for local machine inventory. The agent supports different "tasks".
+    Not only for machine inventory. The agent supports different tasks:
 
     \pause
     \begin{itemize}
@@ -91,21 +91,21 @@
 \begin{frame}
     \frametitle{Network discovery}
 
-    FusionInventory can import basic network inventory in GLPI
-    \begin{block}{What?}
+    FusionInventory can do basic network inventory in GLPI
+    \begin{block}{Seek}
     \begin{itemize}
-        \item hostname
-        \item mac address
-        \item IP address
-        \item serial number
-        \item Windows user and domain
+      \item nmap
+      \item netbios
+      \item SNMP query
     \end{itemize}
     \end{block}
-
-    \begin{block}{How?}
-    At this stage we collect information with nmap, netbios and SNMP query.
+    \begin{block}{Identify}
+    \begin{itemize}
+        \item network stack
+        \item Windows domain information
+        \item sysdesc comparaison
+    \end{itemize}
     \end{block}
-
 \end{frame}
 
 \begin{frame}
@@ -141,7 +141,7 @@
     \begin{block}{How?}
     send the Magic Packet from an agent in the same network
     \begin{itemize}
-        \item send true ethernet packet
+        \item send raw ethernet packet
         \item UDP packet still possible
     \end{itemize}
     \end{block}
@@ -180,7 +180,7 @@
 
     \pause
 
-    \begin{block}{FusionInventory Portage for dummies}
+    \begin{block}{FusionInventory portage for dummies}
         \begin{itemize}
             \item extend the Inventory modules to collect information
             \item and, hum, well, that's all. We're done :D
@@ -231,9 +231,12 @@
 
     \begin{block}{different options}
         \begin{itemize}
-            \item Distribution packages \small{(Debian, Fedora, EPEL, Ubuntu, Mageia, ...)}
-            \item Windows installer (GPO, psexec, ...)
-            \item static prebuilt packages, untar and run \small{(53 differents system so far)}
+            \item distribution packages \\
+            \small{Debian, Fedora, EPEL, Ubuntu, Mageia, ...}
+            \item Windows installer \\
+            \small{GPO, psexec, ...}
+            \item static prebuilt packages, untar and run \\
+            \small{53 differents system so far}
             \item tarball or CPAN installation
         \end{itemize}
     \end{block}
@@ -245,7 +248,7 @@
 \begin{frame}
     \frametitle{Server?}
 
-    \begin{block}{3 different servers}
+    \begin{block}{3 different servers (so far!)}
         \begin{itemize}
             \item FusionInventory for GLPI
             \item Uranos
@@ -257,7 +260,7 @@
 
 
     \begin{block}{server less}
-        local mode is also possible for inventory
+        local mode is also possible
     \end{block}
 \end{frame}
 
