@@ -43,8 +43,23 @@
 
 \frame[plain]{\titlepage}
 
+\begin{frame}
+    \frametitle{About myself}
+
+Free software enthusiast with an awful french accent
+    \begin{itemize}
+    \item Debian Developer
+    \item Perl Monger
+    \item Former OCS Inventory developer
+    \item Works at TECLIB', Paris, France
+    \item FusionInventory Project coleader
+    \end{itemize}
+
+\end{frame}
+
 
 \section{Overview}
+
 
 \begin{frame}
     \frametitle{Global overview}
@@ -82,10 +97,11 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{And they kissed}
+    \frametitle{And we merged}
     
-    And they did some kind of fusion...
-    \includegraphics[height=6.5cm]{./pics/explode.jpg}
+    \begin{center}
+    \includegraphics[height=6.5cm]{./pics/fusinv.pdf}
+    \end{center}
 \end{frame}
 
 
@@ -165,6 +181,7 @@
     \begin{itemize}
     \item FusionInventory for GLPI 0.78: beta planned for this month
     \item ESX inventory: before june
+    \item Android Agent
     \end{itemize}
 
     Work in progress
@@ -175,17 +192,12 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{FusionInventory for GLPI 0.78: Task scheduler 1/3}
+\frametitle{FusionInventory for GLPI 0.78: Action scheduler 1/2}
     \includegraphics[height=7.5cm]{pics/fusion_task.pdf}
 \end{frame}
 
 \begin{frame}
-\frametitle{FusionInventory for GLPI 0.78: Task scheduler 2/3}
-    \includegraphics[height=7.5cm]{pics/fusion_task.pdf}
-\end{frame}
-
-\begin{frame}
-\frametitle{FusionInventory for GLPI 0.78: Task scheduler 3/3}
+\frametitle{FusionInventory for GLPI 0.78: Action scheduler 2/2}
     \includegraphics[height=7.5cm]{pics/walid_task_1.png}
 \end{frame}
 
@@ -210,77 +222,34 @@
 
    \includegraphics[height=5cm]{./pics/esx2.png}
 \end{frame}
+
+%\begin{frame}
+%\frametitle{OCS/XML → REST/JSON transition}
+%    
+%\begin{block}{Why}
+%    \begin{itemize}
+%    \item non standard protocol
+%    \begin{itemize}
+%    \item unhard to extend: parameters send once whatever you do
+%    \item odd XML structure to parse
+%    \item hard to extend
+%    \end{itemize}
+%    \item more modern alternative nowaday 
+%    \begin{itemize}
+%    \item REST
+%    \item JSON
+%    \end{itemize}
+%    \end{itemize}
+%\end{block}
 %
+% \begin{block}{How this will be achieved}
+%    \begin{itemize}
+%    \item Long transition with dual system
+%    \item keep OCS inventory compatibiliy
+%    \end{itemize}
+%\end{block} 
 
-
-\begin{frame}
-\frametitle{Software deployment 1/2}
-
-
-   \includegraphics[height=5cm]{./pics/software-deployment.png}
-\end{frame}
-%
-\begin{frame}
-\frametitle{Software deployment 2/2}
-
-
-   \includegraphics[height=5cm]{./pics/software-deployment2.png}
-\end{frame}
-
-\begin{frame}
-\frametitle{Software deployment peer to peer 1/3}
-    Once upon a time was \\
-    a slow software deployment...
-    \includegraphics[height=6cm]{pics/p2p-sans.pdf}
-\end{frame}
-\begin{frame}
-\frametitle{Software deployment peer to peer 2/3}
-But with some magie...
-   \includegraphics[height=8cm]{./pics/OMO.jpg}
-\end{frame}
-\begin{frame}
-\frametitle{Software deployment peer to peer 3/3}
-    \includegraphics[height=7.5cm]{pics/p2p-avec.pdf}
-    They finally got married!
-\end{frame}
-
-
-%
-\begin{frame}
-\frametitle{OCS/XML → REST/JSON transition}
-    
-\begin{block}{Why}
-    \begin{itemize}
-    \item non standard protocol
-    \begin{itemize}
-    \item unhard to extend: parameters send once whatever you do
-    \item odd XML structure to parse
-    \item hard to extend
-    \end{itemize}
-    \item more modern alternative nowaday 
-    \begin{itemize}
-    \item REST
-    \item JSON
-    \end{itemize}
-    \end{itemize}
-\end{block}
-
- \begin{block}{How this will be achieved}
-    \begin{itemize}
-    \item Long transition with dual system
-    \item keep OCS inventory compatibiliy
-    \end{itemize}
-\end{block} 
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Demo}
-
-   \includegraphics[height=5cm]{./pics/fusinvglpi.png}
-
-    \bf{FusionInventory for GLPI} is ... \pause a plugin for \pause ... \bf{GLPI}.
-\end{frame}
+%\end{frame}
 
 \begin{frame}
     \frametitle{Demo}
@@ -295,10 +264,13 @@ But with some magie...
 \begin{frame}
     \frametitle{Questions?}
 
-    \bf{Questions?}
+%    \bf{Questions?}
+    \begin{center}
 
+    \includegraphics[height=5cm]{./pics/question.pdf}
 
-    \includegraphics[height=7.5cm]{./pics/ask.jpg}
+    \end{center}
+%    \includegraphics[height=7.5cm]{./pics/ask.jpg}
     
 \end{frame}
 
