@@ -77,12 +77,9 @@ Free software enthusiast with an awful french accent
 \section{Overview}
 
 
-\begin{frame}
-    \frametitle{Global overview}
-
-
-
-\end{frame}
+%\begin{frame}
+%    \frametitle{Global overview}
+%\end{frame}
 
 \begin{frame}
     \frametitle{Installation 1/3}
@@ -123,7 +120,7 @@ Free software enthusiast with an awful french accent
 \end{frame}
 
 \begin{frame}
-    \frametitle{Architecutre}
+    \frametitle{Architecture}
 
     \includegraphics[height=6.5cm]{pics/scale.pdf}
 
@@ -158,9 +155,9 @@ Free software enthusiast with an awful french accent
 
     \begin{block}{How to feed my database?}
         \begin{itemize}
-            \item agent
-            \item network discovery
-            \item data loading
+            \item the desktop and server computers
+            \item networking devices
+            \item data loading from legacy system
             \item financial information
             \item ...
         \end{itemize}
@@ -183,7 +180,7 @@ Free software enthusiast with an awful french accent
 
 \begin{frame}
 
-    \frametitle{Network switch, printer, router, etc?}
+    \frametitle{Networking devices}
 
     \begin{block}{FusionInventory do it remotely for you}
         \begin{itemize}
@@ -207,11 +204,17 @@ Free software enthusiast with an awful french accent
         \end{itemize}
     \end{block}
 
+\end{frame}
 
-    \begin{block}{Various solutions}
+\begin{frame}
+
+    \frametitle{Application integration}
+
+    \begin{block}{Wait, some tools are already running here! How to interacte with them?}
         \begin{itemize}
-            \item SOAP interface
-            \item CSV import
+            \item webservice interface
+            \item plugin API
+            \item CSV import/export
             \item ETL
         \end{itemize}
     \end{block}
@@ -219,8 +222,56 @@ Free software enthusiast with an awful french accent
 \end{frame}
 
 
-
 \section{HelpDesk}
+
+\begin{frame}
+
+    \frametitle{HelpDesk: the big picture}
+
+    \begin{block}{ITIL v1 including}
+        \begin{itemize}
+            \item SLA
+            \item User satisfaction
+        \end{itemize}
+    \end{block}
+
+
+\end{frame}
+
+\begin{frame}
+
+    \frametitle{HelpDesk: the interfaces 1/2}
+
+    \begin{block}{Web interfaces}
+        \begin{itemize}
+            \item End user simplier interface
+            \item Support team interface
+            \item Phone and mobile interface
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+\begin{frame}
+
+    \frametitle{HelpDesk: the interfaces 2/2}
+
+    \begin{block}{Webservice}
+        \begin{itemize}
+            \item drive another Issue Tracking System
+            \item or the opposite
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Mail}
+       \begin{itemize}
+            \item send notification
+            \item update tickets
+       \end{itemize}
+    \end{block}
+
+
+\end{frame}
+
 \section{Reporting}
 \section{Questions}
 
