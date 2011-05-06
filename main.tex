@@ -7,6 +7,7 @@
 }
 \definecolor{craneorange}{RGB}{220,197, 90}
 
+\usepackage{pgf,pgfarrows,pgfnodes}
 \usepackage[english]{babel}
 \usepackage{times}
 \usepackage{amsmath}
@@ -180,11 +181,7 @@ Free software enthusiast with an awful french accent
 \begin{frame}
     \frametitle{Installation 1/3}
 
- \begin{columns}
- \begin{column}{0.15\textwidth}
-         \includegraphics[height=8.5cm]{./pics/os.pdf}
- \end{column}
- \begin{column}{1.25\textwidth}
+         \pgfputat{\pgfxy(-1,-3)}{\pgfbox[left,top]{\includegraphics[height=2.5cm]{./pics/php-mysql.jpg}}}
     \begin{block}{Easy step}
         \begin{itemize}
             \item Common web application
@@ -194,8 +191,6 @@ Free software enthusiast with an awful french accent
 
     Extract, run the wizard, your done!
 
- \end{column}
-\end{columns}
 
 
 
@@ -268,7 +263,7 @@ Free software enthusiast with an awful french accent
 
  \begin{columns}
  \begin{column}{0.34\textwidth}
-    \includegraphics[height=6.5cm]{pics/database.jpg}
+    \includegraphics[height=6.5cm]{pics/information.jpg}
  \end{column}
  \begin{column}{0.90\textwidth}
  \end{column}
@@ -285,7 +280,7 @@ Free software enthusiast with an awful french accent
 
  \begin{columns}
  \begin{column}{0.34\textwidth}
-    \includegraphics[height=6.5cm]{pics/database.jpg}
+    \includegraphics[height=6.5cm]{pics/information.jpg}
  \end{column}
  \begin{column}{0.90\textwidth}
     \begin{block}{How to feed my database?}
@@ -307,13 +302,24 @@ Free software enthusiast with an awful french accent
 \begin{frame}
 
     \frametitle{Computer}
-
+ \begin{columns}
+ \begin{column}{0.15\textwidth}
+         \includegraphics[height=8.5cm]{./pics/os.pdf}
+ \end{column}
+ \begin{column}{1.25\textwidth}
     \begin{block}{Easy step}
         \begin{itemize}
             \item Agent packaged for most of the OS
             \item Ready to use, no build, no dependency!
         \end{itemize}
     \end{block}
+
+
+ \end{column}
+\end{columns}
+
+
+
 
 \end{frame}
 
@@ -487,6 +493,7 @@ Free software enthusiast with an awful french accent
                 \item Server: \url{http://www.flickr.com/photos/sylvar/31436963/}
                 \item Helpdesk: \url{http://www.flickr.com/photos/runlevel0/2196587153/}
                 \item Database: \url{http://www.flickr.com/photos/garryknight/5476230085/}
+                \item Information: \url{http://www.flickr.com/photos/garryknight/5476230085/}
         \end{itemize}
 
 \end{frame}
