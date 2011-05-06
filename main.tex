@@ -7,14 +7,21 @@
 }
 \definecolor{craneorange}{RGB}{220,197, 90}
 
-
 \usepackage[english]{babel}
 \usepackage{times}
 \usepackage{amsmath}
 % math extension - one probably wants to use symbols like '[' (written as '$[$')
 \usepackage{ucs}
 %\usepackage[utf8]{inputenc}
-\usepackage[utf8x]{inputenc}
+\usefonttheme{structuresmallcapsserif}
+
+% utf8x does not work with xetex
+\usepackage{ifxetex}
+\ifxetex
+\else
+        \usepackage[utf8x]{inputenc}
+\fi
+
 \usepackage[normalem]{ulem}
 
 %\setbeamercolor{background canvas}{bg=\includegraphics[width=\textwidth]{./pics/wolf.png}}
@@ -27,17 +34,10 @@
 \date{LinuxTag 2011}
 \titlegraphic{GLPI and FusionInventory}
 %subtitle{\includegraphics[width=1.2cm]{./pics/fusioninventory-logo.png}}
-\institute{\includegraphics[height=3.2cm]{./pics/logos/glpi.jpg}}
+\institute{\includegraphics[height=3.2cm]{./pics/logos/glpi_fusinv.jpg}}
 \author{ Gonéri Le Bouder and Walid Nouh }
-%\logo{\includegraphics[height=3.7cm]{./pics/fusinvglpi.png}}
+\logo{\includegraphics[height=0.7cm]{./pics/logos/glpi+fusinv_small.jpg}}
 
-\AtBeginSection[] % Do nothing for \section*
-{
-    \begin{frame}<beamer>
-        \frametitle{Outline}
-        \tableofcontents[currentsection]
-    \end{frame}
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -77,9 +77,57 @@ Free software enthusiast with an awful french accent
 \section{Overview}
 
 
-%\begin{frame}
-%    \frametitle{Global overview}
-%\end{frame}
+\begin{frame}
+    \frametitle{What is GLPI for?}
+
+    \begin{block}{The sales department}
+        \begin{itemize}
+            \item How much did we spend last year with IBM?
+            \item Is the paternship with Oracle still running?
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{What is GLPI for?}
+
+    \begin{block}{The IT crowd}
+        \begin{itemize}
+            \item ?
+            \item How many server still run with 2GB of memory?
+            \item Do we still have those old Toshiba laptop?
+            \item How many server still run with 2GB of memory?
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{What is GLPI for?}
+
+    \begin{block}{The HelpDesk manager}
+        \begin{itemize}
+            \item ?
+            \item How many server still run with 2GB of memory?
+            \item Do we still have those old Toshiba laptop?
+            \item How many server still run with 2GB of memory?
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{What is GLPI for?}
+
+    \begin{block}{Understand what ?}
+        \begin{itemize}
+            \item Do we still have those old Toshiba laptop?
+            \item How many server still run with 2GB of memory?
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
 
 \begin{frame}
     \frametitle{Installation 1/3}
@@ -127,7 +175,7 @@ Free software enthusiast with an awful french accent
 \end{frame}
 
 \begin{frame}
-    \frametitle{Architecutre}
+    \frametitle{Architecture}
 
     \includegraphics[height=1.5cm]{pics/scale.pdf}
     \begin{block}{Really?}
@@ -273,6 +321,57 @@ Free software enthusiast with an awful french accent
 \end{frame}
 
 \section{Reporting}
+
+\section{What else}
+
+\begin{frame}
+
+    \frametitle{What Else}
+
+
+\includegraphics[height=7.5cm]{./pics/whatelse.jpg}
+
+\end{frame}
+
+\begin{frame}
+
+    \frametitle{GLPI}
+
+    \begin{block}{A nonprofit organisation}
+        \begin{itemize}
+            \item Indepnet, a French 1901 nonprofit association
+            \item Since 2002
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Two guardians of the flame}
+        \begin{itemize}
+            \item Jean-Mathieu Doléans
+            \item Julien Dombre
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+
+    \frametitle{FusionInventory}
+
+    \begin{block}{A sister project}
+        \begin{itemize}
+            \item Created by some GLPI developers
+            \item Strong relationship with GLPI
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{But also}
+        \begin{itemize}
+            \item Work with other projects
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
 \section{Questions}
 
 \begin{frame}
