@@ -35,9 +35,17 @@
 \date{LinuxTag 2011}
 \titlegraphic{GLPI and FusionInventory}
 %subtitle{\includegraphics[width=1.2cm]{./pics/fusioninventory-logo.png}}
-\institute{\includegraphics[height=3.2cm]{./pics/logos/glpi_fusinv.jpg}}
+\institute{\includegraphics[height=3.2cm]{./pics/logos/Logo_LinuxTag.pdf}}
 \author{ Gonéri Le Bouder and Walid Nouh }
 \logo{\includegraphics[height=0.7cm]{./pics/logos/glpi+fusinv_small.jpg}}
+
+\AtBeginSection[] % Do nothing for \section*
+{
+    \begin{frame}<beamer>
+        \frametitle{Outline}
+    \tableofcontents[currentsection]
+        \end{frame}
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -90,7 +98,7 @@ IT management consultant
 \end{frame}
 
 
-\section{Overview}
+\section{What is GLPI for?}
 
 
 \begin{frame}
@@ -144,7 +152,7 @@ IT management consultant
  \end{column}
  \begin{column}{1\textwidth}
 
-    \begin{block}{The HelpDesk team}
+    \begin{block}{The Service Desk team}
         \begin{itemize}
             \item Mr Jones computer is out of order, what happend?
             \item Oh the printer ink cartridge is running \\
@@ -237,6 +245,13 @@ IT management consultant
             {\small ActiveDirectory, OpenLDAP, ...}
         \end{itemize}
     \end{block}
+
+    \begin{block}{And more}
+        \begin{itemize}
+            \item POP3
+            \item IMAP
+        \end{itemize}
+    \end{block}
  \end{column}
 \end{columns}
 \end{frame}
@@ -297,7 +312,7 @@ IT management consultant
 \end{frame}
 
 
-\section{Asset Inventory}
+\section{Collect your information}
 
 \begin{frame}
 \includegraphics[height=6.5cm]{pics/bigpicture.pdf}
@@ -423,8 +438,12 @@ IT management consultant
 
 \begin{frame}
 
+
+
+
     \frametitle{Existing Inventory system}
 
+ 
     \begin{block}{What about my current system?}
         \begin{itemize}
             \item Financial information
@@ -432,14 +451,20 @@ IT management consultant
             \item Helpdesk
         \end{itemize}
     \end{block}
+   
 
 \end{frame}
 
 \begin{frame}
 
     \frametitle{Application integration}
-
-    \begin{block}{Wait, some tools are already running here! How to interacte with them?}
+ \begin{columns}
+ \begin{column}{0.45\textwidth}
+         \includegraphics[height=7.5cm]{./pics/house_of_cards.jpg}
+ \end{column}
+ \begin{column}{0.45\textwidth}
+     \begin{block}{Wait, some tools are already running here! \\
+     How to interacte with them?}
         \begin{itemize}
             \item webservice interface
             \item plugin API
@@ -447,15 +472,33 @@ IT management consultant
             \item ETL
         \end{itemize}
     \end{block}
+   
+ \end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+
+    \frametitle{Application integration: plugin}
+
+    \begin{block}{A large collection of extension}
+        \begin{itemize}
+            \item Add load of new features
+            \item Great integration in GLPI
+        \end{itemize}
+    \end{block}
 
 \end{frame}
 
 
-\section{HelpDesk}
+
+
+\section{Service Desk}
 
 \begin{frame}
 
-    \frametitle{HelpDesk: the big picture}
+    \frametitle{Service Desk: the big picture}
 
     \begin{block}{ITIL v1 including}
         \begin{itemize}
@@ -470,7 +513,7 @@ IT management consultant
 
 \begin{frame}
 
-    \frametitle{HelpDesk: the interfaces 1/2}
+    \frametitle{Service Desk: the interfaces 1/2}
 
     \begin{block}{Web interfaces}
         \begin{itemize}
@@ -483,7 +526,7 @@ IT management consultant
 \end{frame}
 \begin{frame}
 
-    \frametitle{HelpDesk: the interfaces 2/2}
+    \frametitle{Service Desk: the interfaces 2/2}
 
     \begin{block}{Webservice}
         \begin{itemize}
@@ -504,6 +547,23 @@ IT management consultant
 \end{frame}
 
 \section{Reporting}
+
+\begin{frame}
+
+    \frametitle{Service Desk: the big picture}
+
+    \begin{block}{ITIL v1 including}
+        \begin{itemize}
+            \item Incident management
+            \item Business rules
+            \item Notifications, multilingual support
+        \end{itemize}
+    \end{block}
+
+
+\end{frame}
+
+
 
 \section{What else}
 
@@ -601,6 +661,7 @@ IT management consultant
                 \item Information: \url{http://www.flickr.com/photos/garryknight/5476230085/}
                 \item Networking: \url{http://www.flickr.com/photos/dbreg2007/4376127852/}
                 \item Printer: \url{http://www.flickr.com/photos/photofarmer/467241015/}
+                \item House of cards: \url{http://www.flickr.com/photos/gibbons/2294375187/in/photostream/}
         \end{itemize}
 
 \end{frame}
