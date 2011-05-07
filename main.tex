@@ -48,6 +48,7 @@
 
 \begin{frame}
     \frametitle{About us: Walid Nouh}
+<<<<<<< HEAD
 IT management consultant
     \begin{itemize}
     \item GLPI core developer
@@ -55,6 +56,17 @@ IT management consultant
     \item Quadskate fanatic
     \item Work at TECLIB', Brussels, Belgium
     \end{itemize}
+=======
+
+    \begin{block}{IT management consultant}
+        \begin{itemize}
+        \item GLPI core developer
+        \item FusionInventory project co-leader
+        \item Rollerskate fanatic
+        \item Work at TECLIB', Brussels, Belgium
+        \end{itemize}
+    \end{block}
+>>>>>>> c33110151a9501e3e4285e3f62e2cd3f61f6d30c
 
 \end{frame}
 
@@ -62,14 +74,18 @@ IT management consultant
 
 \begin{frame}
     \frametitle{About us: Gonéri Le Bouder}
-Free software enthusiast with an awful french accent
-    \begin{itemize}
-    \item Debian Developer
-    \item Perl Monger
-    \item Former OCS Inventory developer
-    \item FusionInventory project co-leader
-    \item Work at TECLIB', Paris, France
-    \end{itemize}
+
+
+    \begin{block}{Free software enthusiast}
+        \begin{itemize}
+        \item Debian Developer
+        \item Perl Monger
+        \item Former OCS Inventory developer
+        \item FusionInventory project co-leader
+        \item Work at TECLIB', Paris, France
+        \item {\tiny and an awful french accent}
+        \end{itemize}
+    \end{block}
 
 \end{frame}
 
@@ -80,6 +96,11 @@ Free software enthusiast with an awful french accent
 \begin{frame}
     \frametitle{What is GLPI for?}
 
+ \begin{columns}
+ \begin{column}{0.35\textwidth}
+         \includegraphics[height=7.5cm]{./pics/purchasing.jpg}
+ \end{column}
+ \begin{column}{0.65\textwidth}
     \begin{block}{The purchasing department}
         \begin{itemize}
             \item How much did we spend last year with IBM?
@@ -87,6 +108,10 @@ Free software enthusiast with an awful french accent
             \item How many and where are the assets bought with last year budget?
         \end{itemize}
     \end{block}
+ \end{column}
+\end{columns}
+
+
 
 \end{frame}
 
@@ -199,31 +224,40 @@ Free software enthusiast with an awful french accent
 \begin{frame}
     \frametitle{Installation 2/3}
 
+
+ \begin{columns}
+ \begin{column}{0.34\textwidth}
+    \includegraphics[height=6.5cm]{pics/addressbook.jpg}
+ \end{column}
+ \begin{column}{0.90\textwidth}
     \begin{block}{Easy, really? I want LDAP support! Ahah}
         \begin{itemize}
             \item Strong LDAP integration
-            \item LDAP v3 compatible (ActiveDirectory, OpenLDAP, ...)
+            \item LDAP v3 compatible \\
+            {\small ActiveDirectory, OpenLDAP, ...}
         \end{itemize}
     \end{block}
-
+ \end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}
     \frametitle{Installation 3/3}
 
+
+ \begin{columns}
+ \begin{column}{0.34\textwidth}
+    \includegraphics[height=10.5cm]{pics/sso.jpg}
+ \end{column}
+ \begin{column}{0.90\textwidth}
     \begin{block}{That was trivial, but I want SSO too!}
         \begin{itemize}
             \item WebSSO
             \item CAS
         \end{itemize}
     \end{block}
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Architecture}
-
-    \includegraphics[height=6.5cm]{pics/scale.pdf}
+ \end{column}
+\end{columns}
 
 \end{frame}
 
@@ -232,16 +266,30 @@ Free software enthusiast with an awful french accent
 
  \begin{columns}
  \begin{column}{0.34\textwidth}
-    \includegraphics[height=6.5cm]{pics/scale.pdf}
  \end{column}
  \begin{column}{0.90\textwidth}
+    \includegraphics[height=6.5cm]{pics/scale.pdf}
+ \end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Architecture}
+
+ \begin{columns}
+ \begin{column}{0.34\textwidth}
     \begin{block}{Really?}
         \begin{itemize}
-            \item Existing large installation \\
+            \item Existing large installation of GLPI \\
             {\small up to 130K computer inventoried}
             \item 1 million computer referenced so far and still growing
         \end{itemize}
     \end{block}
+
+ \end{column}
+ \begin{column}{0.90\textwidth}
+    \includegraphics[height=6.5cm]{pics/scale.pdf}
 
  \end{column}
 \end{columns}
@@ -282,10 +330,10 @@ Free software enthusiast with an awful french accent
     \includegraphics[height=6.5cm]{pics/information.jpg}
  \end{column}
  \begin{column}{0.90\textwidth}
-    \begin{block}{Which assets to manage?}
+    \begin{block}{Inputs}
         \begin{itemize}
             \item desktop computers and server
-            \item network devices (routers, switchs, printers, wifi AP, etc)
+            \item network devices
             \item data coming from legacy system
             \item financial information
             \item ...
@@ -326,7 +374,16 @@ Free software enthusiast with an awful french accent
 
     \frametitle{Network devices}
 
-    \begin{block}{FusionInventory do it remotely for you}
+
+ \begin{columns}
+ \begin{column}{0.15\textwidth}
+         \includegraphics[height=8.5cm]{./pics/networking.jpg}
+ \end{column}
+ \begin{column}{1.25\textwidth}
+    
+
+    \begin{block}{routers, switchs, printers, wifi AP, etc \\
+    FusionInventory do it remotely for you}
         \begin{itemize}
             \item Nothing to install
             \item Network scan to identify asset
@@ -334,7 +391,35 @@ Free software enthusiast with an awful french accent
         \end{itemize}
     \end{block}
 
+ \end{column}
+\end{columns}
 \end{frame}
+
+
+\begin{frame}
+
+    \frametitle{Network devices}
+
+
+ \begin{columns}
+ \begin{column}{0.15\textwidth}
+         \includegraphics[height=8.5cm]{./pics/printer.jpg}
+ \end{column}
+ \begin{column}{1.25\textwidth}
+    
+
+    \begin{block}{routers}
+        \begin{itemize}
+            \item Cartridge ink levels
+            \item Counter and statistics
+        \end{itemize}
+    \end{block}
+
+ \end{column}
+\end{columns}
+\end{frame}
+
+
 
 \begin{frame}
 
@@ -505,12 +590,17 @@ Free software enthusiast with an awful french accent
     \frametitle{Thanks}
 
         \begin{itemize}
+                \item Purchasing: \url{http://www.flickr.com/photos/epsos/5394616925/}
+                \item LDAP: \url{http://www.flickr.com/photos/heyrocker/2954514315/}
+                \item SSO: \url{http://www.flickr.com/photos/13519089@N03/1380483002/}
                 \item User picture: \url{http://www.flickr.com/photos/wonderlane/5043174502/}
                 \item Manager: \url{http://www.flickr.com/photos/eastcapital/5228405457/}
                 \item Server: \url{http://www.flickr.com/photos/sylvar/31436963/}
                 \item Helpdesk: \url{http://www.flickr.com/photos/runlevel0/2196587153/}
                 \item Database: \url{http://www.flickr.com/photos/garryknight/5476230085/}
                 \item Information: \url{http://www.flickr.com/photos/garryknight/5476230085/}
+                \item Networking: \url{http://www.flickr.com/photos/dbreg2007/4376127852/}
+                \item Printer: \url{http://www.flickr.com/photos/photofarmer/467241015/}
         \end{itemize}
 
 \end{frame}
