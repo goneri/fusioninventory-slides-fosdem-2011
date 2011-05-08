@@ -167,8 +167,8 @@
 
     \begin{block}{The users}
         \begin{itemize}
-            \item Why I can't print?
-            \item Why I can't send email anymore?
+            \item Why can't I print?
+            \item Why can't I send email anymore?
             \item Are the IT guys really working on my request?
         \end{itemize}
     \end{block}
@@ -202,7 +202,7 @@
 
 
 \begin{frame}
-    \frametitle{Installation 1/3}
+    \frametitle{Installation}
 
          \pgfputat{\pgfxy(-1,-3)}{\pgfbox[left,top]{\includegraphics[height=2.5cm]{./pics/php-mysql.jpg}}}
     \begin{block}{Easy step}
@@ -217,53 +217,6 @@
 
 
 
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Installation 2/3}
-
-
- \begin{columns}
- \begin{column}{0.34\textwidth}
-    \includegraphics[height=6.5cm]{pics/addressbook.jpg}
- \end{column}
- \begin{column}{0.90\textwidth}
-    \begin{block}{Native LDAP support}
-        \begin{itemize}
-            \item Strong LDAP integration
-            \item LDAP v3 compatible \\
-            {\small ActiveDirectory, OpenLDAP, ...}
-        \end{itemize}
-    \end{block}
-
-    \begin{block}{Other authentication methods}
-        \begin{itemize}
-            \item POP3
-            \item IMAP
-        \end{itemize}
-    \end{block}
- \end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Installation 3/3}
-
-
- \begin{columns}
- \begin{column}{0.34\textwidth}
-    \includegraphics[height=10.5cm]{pics/sso.jpg}
- \end{column}
- \begin{column}{0.90\textwidth}
-    \begin{block}{Single Sign On too!}
-        \begin{itemize}
-            \item WebSSO
-            \item CAS
-        \end{itemize}
-    \end{block}
- \end{column}
-\end{columns}
 
 \end{frame}
 
@@ -341,7 +294,7 @@
             \item Desktop computers and server
             \item Network devices
             \item Data coming from legacy system
-            \item Financial information
+            \item Financial informations
             \item ...
         \end{itemize}
     \end{block}
@@ -388,7 +341,7 @@
  \begin{column}{1.25\textwidth}
     
 
-    \begin{block}{routers, switchs, printers, wifi AP, etc \\
+    \begin{block}{routers, switchs, printers... \\
     FusionInventory do it remotely for you}
         \begin{itemize}
             \item Nothing to install
@@ -437,7 +390,7 @@
  
     \begin{block}{What about my current system?}
         \begin{itemize}
-            \item Financial information
+            \item Financial informations
             \item License
             \item Helpdesk
         \end{itemize}
@@ -560,27 +513,87 @@
 \end{columns}
 \end{frame}
 
-\section{Privilege management}
+\section{Habilitations}
 
 \begin{frame}
-\frametitle{Entities}
-    \begin{block}{As much Entity as you need}
+    \frametitle{Habilitations}
+
+
+ \begin{columns}
+ \begin{column}{0.34\textwidth}
+    \includegraphics[height=6.5cm]{pics/addressbook.jpg}
+ \end{column}
+ \begin{column}{0.90\textwidth}
+    \begin{block}{Native LDAP support}
+        \begin{itemize}
+            \item Strong LDAP integration
+            \item LDAP v3 compatible \\
+            {\small ActiveDirectory, OpenLDAP, ...}
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Other authentication methods}
+        \begin{itemize}
+            \item POP3
+            \item IMAP
+        \end{itemize}
+    \end{block}
+ \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Habilitations}
+
+
+ \begin{columns}
+ \begin{column}{0.34\textwidth}
+    \includegraphics[height=10.5cm]{pics/sso.jpg}
+ \end{column}
+ \begin{column}{0.90\textwidth}
+    \begin{block}{Single Sign On too!}
+        \begin{itemize}
+            \item WebSSO
+            \item CAS
+        \end{itemize}
+    \end{block}
+ \end{column}
+\end{columns}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Habilitations}
+    \begin{block}{Entities}
         \begin{itemize}
             \item Independent administrative entity
             \item Can be mapped on your LDAP organisation
-            \item Can have special right
+            \item Contains assets and tickets
         \end{itemize}
 
     \end{block}
 \end{frame}
 
 \begin{frame}
-\frametitle{Entities: Example}
+\frametitle{Habilitations}
+    \begin{block}{Profile}
+        \begin{itemize}
+            \item More than 100 rights
+            \item Habilitation : a profile on an entity 
+        \end{itemize}
+
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Habilitations: Example}
 Let's take an example.
 \end{frame}
 
 \begin{frame}
-\frametitle{Entities: Example}
+\frametitle{Habilitations: Example}
 \begin{columns}
  \begin{column}{0.45\textwidth}
          \includegraphics[height=4.5cm]{./pics/entites.png}
@@ -612,7 +625,7 @@ Let's take an example.
 
 
 \begin{frame}
-\frametitle{Entities: Example}
+\frametitle{Habilitations: Example}
 \begin{columns}
  \begin{column}{0.45\textwidth}
          \includegraphics[height=7.5cm]{./pics/simpsons/comm_kent_brockman.png}
@@ -629,7 +642,7 @@ Let's take an example.
 \end{frame}
 
 \begin{frame}
-\frametitle{Entities: Example}
+\frametitle{Habilitations: Example}
 \begin{columns}
  \begin{column}{0.45\textwidth}
          \includegraphics[height=7.5cm]{./pics/simpsons/Montgomery_Burns.png}
@@ -645,7 +658,7 @@ Let's take an example.
 \end{frame}
 
 \begin{frame}
-\frametitle{Entities: Example}
+\frametitle{Habilitations: Example}
 \begin{columns}
  \begin{column}{0.45\textwidth}
          \includegraphics[height=7.5cm]{./pics/simpsons/police_Wiggum_Clancy.png}
@@ -663,7 +676,7 @@ Let's take an example.
 
 
 \begin{frame}
-\frametitle{Entities: Example}
+\frametitle{Habilitations: Example}
 \begin{columns}
  \begin{column}{0.45\textwidth}
          \includegraphics[height=7.5cm]{./pics/simpsons/homer.png}
