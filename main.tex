@@ -27,10 +27,10 @@
 
 %\setbeamercolor{background canvas}{bg=\includegraphics[width=\textwidth]{./pics/wolf.png}}
 
-\title{Assets management with GLPI}
+\title{IT asset management with GLPI}
 \author{\href{http://www.FusionInventory.org}{FusionInventory.org}}
-\subject{Assets management with FusionInventory and GLPI}
-\keywords{Assets management, Inventory, FusionInventory, GLPI}
+\subject{IT asset management with FusionInventory and GLPI}
+\keywords{IT asset management, Inventory, FusionInventory, GLPI}
 
 \date{LinuxTag 2011}
 \titlegraphic{GLPI and FusionInventory}
@@ -147,6 +147,7 @@
             \item Mr Jones computer is out of order, what happend?
             \item Oh the printer ink cartridge is running \\
                 low on the second floor!
+            \item Is harddrive full on this computer ?
         \end{itemize}
     \end{block}
  \end{column}
@@ -459,7 +460,6 @@
             \item Webservice interface
             \item Plugin API
             \item CSV import/export
-            \item ETL
         \end{itemize}
     \end{block}
    
@@ -496,8 +496,6 @@
 \end{frame}
 
 
-\section{GLPI, all in one}
-
 \begin{frame}
 
 
@@ -506,26 +504,12 @@
  \begin{column}{0.45\textwidth}
          \includegraphics[height=7.5cm]{./pics/glpithelink.jpg}
  \end{column}
- \begin{column}{0.45\textwidth}
- \end{column}
-\end{columns}
-\end{frame}
-
-
-\begin{frame}
-
-
-    \frametitle{GLPI, all in one}
- \begin{columns}
- \begin{column}{0.45\textwidth}
-         \includegraphics[height=7.5cm]{./pics/glpithelink.jpg}
- \end{column}
- \begin{column}{0.45\textwidth}
-    \begin{block}{Both inventory and helpdesk}
+ \begin{column}{0.65\textwidth}
+    \begin{block}{The asset timeline}
         \begin{itemize}
-            \item Inventory assets, contracts, suppliers, ...
-            \item Tickets from users, monitoring systems, ... 
-            \item Get accurate statistics !
+            \item Past : history
+            \item Current : inventory
+            \item Future : warranty, contracts
         \end{itemize}
 
     \end{block}
@@ -534,6 +518,47 @@
 \end{columns}
 \end{frame}
 
+
+\begin{frame}
+
+
+    \frametitle{GLPI, all in one}
+ \begin{columns}
+ \begin{column}{0.45\textwidth}
+         \includegraphics[height=7.5cm]{./pics/glpithelink.jpg}
+ \end{column}
+ \begin{column}{0.65\textwidth}
+    \begin{block}{Helpdesk for everyone}
+        \begin{itemize}
+            \item Tickets on assets
+        \end{itemize}
+
+    \end{block}
+
+ \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+
+
+    \frametitle{GLPI, all in one}
+ \begin{columns}
+ \begin{column}{0.45\textwidth}
+         \includegraphics[height=7.5cm]{./pics/glpithelink.jpg}
+ \end{column}
+ \begin{column}{0.65\textwidth}
+    \begin{block}{Accurate statistics}
+        \begin{itemize}
+            \item 25\% of last year laptop have harddrive failure
+            \item How many incidents resolved by rebooting the Windows server ? 
+        \end{itemize}
+
+    \end{block}
+
+ \end{column}
+\end{columns}
+\end{frame}
 
 \section{Service Desk}
 
