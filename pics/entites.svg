@@ -112,16 +112,16 @@
          transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
     </marker>
     <radialGradient
-       r="274.65189"
-       fy="-649.60638"
-       fx="-907.38696"
-       cy="-649.60638"
-       cx="-907.38696"
-       gradientTransform="matrix(0.47165491,0.131058,-0.15614463,0.56193796,708.54991,603.79216)"
-       gradientUnits="userSpaceOnUse"
-       id="radialGradient3054"
-       xlink:href="#linearGradient6004-0"
-       inkscape:collect="always" />
+       inkscape:collect="always"
+       xlink:href="#linearGradient6004-06"
+       id="radialGradient6014-2"
+       cx="2279.6399"
+       cy="199.73602"
+       fx="2279.6399"
+       fy="199.73602"
+       r="154.65686"
+       gradientTransform="matrix(0.13862469,-0.01081238,0.02056877,0.26371065,-198.4995,412.72816)"
+       gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
        id="linearGradient6004-06">
@@ -148,6 +148,17 @@
          d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
          transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
     </marker>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6004-06"
+       id="radialGradient6018-6"
+       cx="1568.6787"
+       cy="-526.68298"
+       fx="1568.6787"
+       fy="-526.68298"
+       r="382.67981"
+       gradientTransform="matrix(8.6688846e-4,-0.13904302,0.13300318,8.29232e-4,111.74522,555.17471)"
+       gradientUnits="userSpaceOnUse" />
     <marker
        inkscape:stockid="Arrow2Lend"
        orient="auto"
@@ -162,17 +173,6 @@
          d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
          transform="matrix(-1.1,0,0,-1.1,-1.1,0)" />
     </marker>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient6004-06"
-       id="radialGradient6016-5"
-       cx="3848.7529"
-       cy="-1215.3517"
-       fx="3848.7529"
-       fy="-1215.3517"
-       r="274.65189"
-       gradientTransform="matrix(0.19259267,-0.00979451,0.01175436,0.23113013,-232.87174,465.3294)"
-       gradientUnits="userSpaceOnUse" />
     <marker
        inkscape:stockid="Arrow2Lend"
        orient="auto"
@@ -196,7 +196,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7858912"
-     inkscape:cx="755.61151"
+     inkscape:cx="205.42631"
      inkscape:cy="811.79652"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -225,7 +225,7 @@
     <g
        id="g5372"
        transform="matrix(0.13904573,0,0,0.13904573,336.10755,206.81955)"
-       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites-ppl.png"
+       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites.png"
        inkscape:export-xdpi="159"
        inkscape:export-ydpi="159">
       <rect
@@ -251,8 +251,8 @@
     </g>
     <g
        id="g5425"
-       transform="matrix(0.13904573,0,0,0.13904573,543.26413,99.217619)"
-       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites-ppl.png"
+       transform="matrix(0.13904573,0,0,0.13904573,478.36965,95.400297)"
+       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites.png"
        inkscape:export-xdpi="159"
        inkscape:export-ydpi="159">
       <rect
@@ -276,8 +276,8 @@
     </g>
     <g
        id="g5430"
-       transform="matrix(0.13904573,0,0,0.13904573,330.13027,98.820373)"
-       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites-ppl.png"
+       transform="matrix(0.13904573,0,0,0.13904573,439.56018,95.003046)"
+       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites.png"
        inkscape:export-xdpi="159"
        inkscape:export-ydpi="159">
       <rect
@@ -302,7 +302,7 @@
     <g
        id="g5440"
        transform="matrix(0.13904573,0,0,0.13904573,223.27147,299.69534)"
-       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites-ppl.png"
+       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites.png"
        inkscape:export-xdpi="159"
        inkscape:export-ydpi="159">
       <rect
@@ -327,7 +327,7 @@
     <g
        id="g5445"
        transform="matrix(0.13904573,0,0,0.13904573,240.7515,328.06065)"
-       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites-ppl.png"
+       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites.png"
        inkscape:export-xdpi="159"
        inkscape:export-ydpi="159">
       <rect
@@ -350,13 +350,13 @@
            sodipodi:role="line">ServiceDesk</tspan></text>
     </g>
     <path
-       style="fill:none;stroke:url(#radialGradient6018);stroke-width:3.07291078999999989;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:50;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Lend)"
+       style="fill:none;stroke:url(#radialGradient6018);stroke-width:3.07291079;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:50;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Lend)"
        d="m 438.13331,147.18569 85.47692,104.56938"
        id="path5466"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites-ppl.png"
+       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites.png"
        inkscape:export-xdpi="159"
        inkscape:export-ydpi="159" />
     <path
@@ -367,27 +367,7 @@
        inkscape:connector-curvature="0"
        inkscape:connection-start="#g5440"
        inkscape:connection-start-point="d4"
-       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites-ppl.png"
-       inkscape:export-xdpi="159"
-       inkscape:export-ydpi="159" />
-    <path
-       style="fill:none;stroke:url(#radialGradient3054);stroke-width:3.07291079;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:50;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Lend)"
-       d="m 358.06425,137.7216 -44.37324,23.44981"
-       id="path5464-4"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites-ppl.png"
-       inkscape:export-xdpi="159"
-       inkscape:export-ydpi="159" />
-    <path
-       style="fill:none;stroke:url(#radialGradient6016-5);stroke-width:3.07291079;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:50;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Lend)"
-       d="M 491.77095,132.80558 537.741,157.52785"
-       id="path5464-6"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites-ppl.png"
+       inkscape:export-filename="/home/goneri/fusioninventory/slides/pics/entites.png"
        inkscape:export-xdpi="159"
        inkscape:export-ydpi="159" />
   </g>
