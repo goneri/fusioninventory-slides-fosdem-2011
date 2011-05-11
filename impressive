@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec impressive -t SlideUp -T 50 -a 2 -w main.pdf
