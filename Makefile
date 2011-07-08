@@ -12,7 +12,7 @@ FINAL  = $(wildcard *.pdf)
 all: main.pdf
 
 # run pdflatex two times or the table of contents does not appear
-main.pdf: main.tex agent.tex server.tex purpose.tex
+main.pdf: main.tex
 	$(PDFLATEX) $<
 	$(PDFLATEX) $<
 	@echo "-> make view"
