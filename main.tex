@@ -6,14 +6,34 @@
     \setbeamercovered{transparent}
 }
 
+\usepackage[absolute,overlay]{textpos}
+\usepackage{pgf,pgfarrows,pgfnodes}
 \usepackage[english]{babel}
-\usepackage{times}
+\usepackage{lmodern}
+\usepackage{newcent}
 \usepackage{amsmath}
 % math extension - one probably wants to use symbols like '[' (written as '$[$')
 \usepackage{ucs}
 %\usepackage[utf8]{inputenc}
-\usepackage[utf8x]{inputenc}
+%\usefonttheme{structuresmallcapsserif}
+
+% utf8x does not work with xetex
+\usepackage{ifxetex}
+\ifxetex
+\else
+        \usepackage[utf8x]{inputenc}
+\fi
+
 \usepackage[normalem]{ulem}
+
+
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+\newcommand{\WorkInProgress}{%
+\begin{textblock}{14}(120.0,75.7)
+\includegraphics[height=0.7cm]{./pics/workinprogress.jpg}
+\end{textblock}
+  }
 
 %\setbeamercolor{background canvas}{bg=\includegraphics[width=\textwidth]{./pics/wolf.png}}
 
@@ -22,11 +42,16 @@
 \subject{Assets management with FusionInventory and GLPI}
 \keywords{Assets management, Inventory, FusionInventory, GLPI}
 
-\date{HPC Computing and OpenSource / Linux Technical Excellence Stmposium 2011 ~ 17 March 2011}
+\date{July 2011}
+%\titlegraphic{GLPI}
+%subtitle{\includegraphics[width=1.2cm]{./pics/fusioninventory-logo.png}}
+\institute{\includegraphics[height=4.2cm]{./pics/rmll2011.jpg}}
+
 \titlegraphic{}
 %subtitle{\includegraphics[width=1.2cm]{./pics/fusioninventory-logo.png}}
-\institute{\includegraphics[height=4.2cm]{./pics/fusioninventory-logo.pdf}}
-\author{ Gonéri Le Bouder -- goneri@rulezlan.org }
+%\institute{\includegraphics[height=4.2cm]{./pics/fusioninventory-logo.pdf}}
+\author{ David Durieux \texttt{<d.durieux@siprossii.com>} \\
+Gonéri Le Bouder \texttt{<goneri@teclib.com>}}
 \logo{\includegraphics[height=0.7cm]{./pics/fusioninventory-logo.pdf}}
 
 \AtBeginSection[] % Do nothing for \section*
@@ -44,18 +69,55 @@
 \frame[plain]{\titlepage}
 
 \begin{frame}
-    \frametitle{About myself}
+    \frametitle{Who}
 
-Free software enthusiast with an awful french accent
+    \textbf{We are Legion!}
+    \begin{center}
+    \includegraphics[height=3.5cm]{./pics/sparta.jpg}
+    \end{center}
+
     \begin{itemize}
-    \item Debian Developer
-    \item Perl Monger
-    \item Former OCS Inventory developer
-    \item Work at TECLIB', Paris, France
-    \item FusionInventory Project coleader
+    \item about 10 core developers involved in the project
+    \item active community of contributors
+    \item 2 companies involved
     \end{itemize}
 
+    \pause
+    \bf{We are looking for people to JOIN US!}
 \end{frame}
+
+
+\begin{frame}
+    \frametitle{About us: David Durieux}
+
+    \begin{block}{IT management consultant}
+        \begin{itemize}
+        \item GLPI core-developer
+        \item FusionInventory project co-leader
+        \item Work at siprossii, Lyon area, France
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{About us: Gonéri Le Bouder}
+
+
+    \begin{block}{Free software enthusiast}
+        \begin{itemize}
+        \item Debian Developer
+        \item Perl Monger
+        \item Former OCS Inventory developer
+        \item FusionInventory project co-leader
+        \item Work at TECLIB', Paris, France
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
 
 
 \section{Overview}
@@ -253,7 +315,7 @@ Free software enthusiast with an awful french accent
 
     \begin{block}{A large collection of supported OS}
         \begin{itemize}
-            \item all the major system are supported 
+            \item all the major system are supported
             \item portage is easy as soon as a Perl exist
         \end{itemize}
     \end{block}
@@ -353,7 +415,7 @@ Free software enthusiast with an awful french accent
 
 \begin{frame}
     \frametitle{A long long time ago again}
-    
+
     OCS Inventory Agent for UNIX was an inventory agent without SNMP support.
 
 %    \includegraphics[height=2.5cm]{./pics/frog2.pdf}
@@ -361,7 +423,7 @@ Free software enthusiast with an awful french accent
 
 \begin{frame}
     \frametitle{And we merged}
-    
+
     \begin{center}
     \includegraphics[height=6.5cm]{./pics/fusinv.pdf}
     \end{center}
@@ -381,24 +443,6 @@ Free software enthusiast with an awful french accent
         \item IRC: \#FusionInventory on FreeNode
         \item public Forge, Git repositories, etc
     \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Who}
-
-    \sout{\bf{We are Legion!}}
-    \begin{center}
-    \includegraphics[height=3.5cm]{./pics/sparta.jpg}
-    \end{center}
-
-    \begin{itemize}
-    \item about 10 core developers involved in the project
-    \item active community of contributors
-    \item 2 companies involved
-    \end{itemize}
-
-    \pause
-    \bf{We are looking for people to JOIN US!}
 \end{frame}
 
 
@@ -489,7 +533,7 @@ Free software enthusiast with an awful french accent
 
 %\begin{frame}
 %\frametitle{OCS/XML → REST/JSON transition}
-%    
+%
 %\begin{block}{Why}
 %    \begin{itemize}
 %    \item non standard protocol
@@ -498,7 +542,7 @@ Free software enthusiast with an awful french accent
 %    \item odd XML structure to parse
 %    \item hard to extend
 %    \end{itemize}
-%    \item more modern alternative nowaday 
+%    \item more modern alternative nowaday
 %    \begin{itemize}
 %    \item REST
 %    \item JSON
@@ -511,7 +555,7 @@ Free software enthusiast with an awful french accent
 %    \item Long transition with dual system
 %    \item keep OCS inventory compatibiliy
 %    \end{itemize}
-%\end{block} 
+%\end{block}
 
 %\end{frame}
 
@@ -548,7 +592,7 @@ Free software enthusiast with an awful french accent
 
     \end{center}
 %    \includegraphics[height=7.5cm]{./pics/ask.jpg}
-    
+
 \end{frame}
 
 
