@@ -7,14 +7,16 @@
 }
 \definecolor{craneorange}{RGB}{220,197, 90}
 
+\usepackage[absolute,overlay]{textpos} 
 \usepackage{pgf,pgfarrows,pgfnodes}
 \usepackage[english]{babel}
-\usepackage{times}
+\usepackage{lmodern}
+\usepackage{newcent} 
 \usepackage{amsmath}
 % math extension - one probably wants to use symbols like '[' (written as '$[$')
 \usepackage{ucs}
 %\usepackage[utf8]{inputenc}
-\usefonttheme{structuresmallcapsserif}
+%\usefonttheme{structuresmallcapsserif}
 
 % utf8x does not work with xetex
 \usepackage{ifxetex}
@@ -25,18 +27,27 @@
 
 \usepackage[normalem]{ulem}
 
+
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+\newcommand{\WorkInProgress}{%
+\begin{textblock}{14}(120.0,75.7)
+\includegraphics[height=0.7cm]{./pics/workinprogress.jpg}
+\end{textblock}
+  } 
+
 %\setbeamercolor{background canvas}{bg=\includegraphics[width=\textwidth]{./pics/wolf.png}}
 
 \title{IT asset management with GLPI}
-\author{\href{http://www.FusionInventory.org}{FusionInventory.org}}
-\subject{IT asset management with FusionInventory and GLPI}
-\keywords{IT asset management, Inventory, FusionInventory, GLPI}
+\author{\href{http://www.glpi-project.org/}{GLPI project}}
+\subject{GLPI - the IT asset management solution}
+\keywords{IT asset management, Inventory, GLPI}
 
-\date{LinuxTag 2011}
-\titlegraphic{GLPI and FusionInventory}
+\date{July 2011}
+%\titlegraphic{GLPI}
 %subtitle{\includegraphics[width=1.2cm]{./pics/fusioninventory-logo.png}}
-\institute{\includegraphics[height=3.2cm]{./pics/logos/Logo_LinuxTag.pdf}}
-\author{ Gonéri Le Bouder and Walid Nouh }
+\institute{\includegraphics[height=4.2cm]{./pics/rmll2011.jpg}}
+\author{ Gonéri Le Bouder and David Durieux }
 \logo{\includegraphics[height=0.7cm]{./pics/logos/glpi+fusinv_small.jpg}}
 
 \AtBeginSection[] % Do nothing for \section*
@@ -55,14 +66,13 @@
 \frame[plain]{\titlepage}
 
 \begin{frame}
-    \frametitle{About us: Walid Nouh}
+    \frametitle{About us: David Durieux}
 
     \begin{block}{IT management consultant}
         \begin{itemize}
-        \item GLPI core developer
+        \item GLPI core-developer
         \item FusionInventory project co-leader
-        \item Rollerskate fanatic
-        \item Work at TECLIB', Brussels, Belgium
+        \item Work at siprossii, TECLIB', Lyon area, France
         \end{itemize}
     \end{block}
 
@@ -81,7 +91,6 @@
         \item Former OCS Inventory developer
         \item FusionInventory project co-leader
         \item Work at TECLIB', Paris, France
-        \item {\tiny and an awful french accent}
         \end{itemize}
     \end{block}
 
@@ -215,20 +224,6 @@
 
 \end{frame}
 
-\begin{frame}
-    \frametitle{Architecture}
-
- \begin{columns}
- \begin{column}{0.34\textwidth}
-    \includegraphics[height=5.5cm]{pics/scale.png}
- \end{column}
- \begin{column}{0.90\textwidth}
-    \begin{block}{How does it scale?}
-    \end{block}
- \end{column}
-\end{columns}
-\end{frame}
-
 
 \begin{frame}
     \frametitle{Architecture}
@@ -251,11 +246,6 @@
 
 
 \section{Collect your informations}
-
-\begin{frame}
-\includegraphics[height=6.5cm]{pics/bigpicture.png}
-\end{frame}
-
 
 \begin{frame}
 
@@ -306,11 +296,13 @@
  \begin{column}{0.15\textwidth}
          \includegraphics[height=8.5cm]{./pics/os.pdf}
  \end{column}
+
+ Use an system inventory solution.
  \begin{column}{1.25\textwidth}
     \begin{block}{Easy step}
         \begin{itemize}
-            \item Agent packaged for most of the OSes
-            \item Ready to use, no build, no dependency!
+            \item FusionInventory
+            \item OCS Inventory
         \end{itemize}
     \end{block}
 
@@ -341,6 +333,7 @@
             \item Nothing to install
             \item Network scan to identify asset
             \item Use SNMP to collect information
+            \item ESX/ESXi/vCenter remote inventory
         \end{itemize}
     \end{block}
 
@@ -370,75 +363,6 @@
 
  \end{column}
 \end{columns}
-\end{frame}
-
-
-
-\section{Integration}
-
-\begin{frame}
-
-    \frametitle{Existing systems}
-
- 
-    \begin{block}{What about my current system?}
-        \begin{itemize}
-            \item Financial informations
-            \item Licenses
-            \item Helpdesk
-        \end{itemize}
-    \end{block}
-   
-
-\end{frame}
-
-\begin{frame}
-
-    \frametitle{Application integration}
- \begin{columns}
- \begin{column}{0.45\textwidth}
-         \includegraphics[height=7.5cm]{./pics/house_of_cards.jpg}
- \end{column}
- \begin{column}{0.45\textwidth}
-     \begin{block}{Wait, some tools are already running here! \\
-     How to interacte with them?}
-        \begin{itemize}
-            \item Webservice interface
-            \item API for updates
-            \item CSV import/export
-        \end{itemize}
-    \end{block}
-   
- \end{column}
-\end{columns}
-\end{frame}
-
-
-\begin{frame}
-
-    \frametitle{Application integration: plugins}
-
- \begin{columns}
- \begin{column}{0.45\textwidth}
-         \includegraphics[height=7.5cm]{./pics/plugin.jpg}
- \end{column}
- \begin{column}{0.65\textwidth}
-    \begin{block}{A large collection of \\
-    extensions}
-        \begin{itemize}
-            \item Add load of new features
-            \item Tight integration in GLPI
-            \item Powerfull API
-        \end{itemize}
-    \end{block}
-
- \end{column}
-\end{columns}
-
-
-
-
-
 \end{frame}
 
 
@@ -570,20 +494,6 @@
     \end{block}
 \end{frame}
 
-\begin{frame}
-\frametitle{Habilitations: organizational chart}
-\begin{columns}
- \begin{column}{0.45\textwidth}
-         \includegraphics[height=4.5cm]{./pics/entites.png}
- \end{column}
- \begin{column}{0.45\textwidth}
- \end{column}
-\end{columns}
-\end{frame}
-
-
-
-
 
 \begin{frame}
 \frametitle{Authorisation}
@@ -595,109 +505,6 @@
     \end{block}
 \end{frame}
 
-
-\begin{frame}
-\frametitle{Authorisation: Example}
-Let's take an example.
-\end{frame}
-
-\begin{frame}
-\frametitle{Entities: Example}
-\begin{columns}
- \begin{column}{0.45\textwidth}
-         \includegraphics[height=7.5cm]{./pics/simpsons/mayor_Joe-Quimby.png}
- \end{column}
- \begin{column}{0.45\textwidth}
-    \begin{block}{The CEO}
-        \begin{itemize}
-            \item Manage the company 
-        \end{itemize}
-
-    \end{block}
-
- \end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}
-\frametitle{Authorisation: Example}
-\begin{columns}
- \begin{column}{0.45\textwidth}
-         \includegraphics[height=7.5cm]{./pics/simpsons/Montgomery_Burns.png}
- \end{column}
- \begin{column}{0.45\textwidth}
-    \begin{block}{The CTO}
-        \begin{itemize}
-            \item Can do whatever he wants in the IT department
-        \end{itemize}
-    \end{block}
- \end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}
-\frametitle{Authorisation: Example}
-\begin{columns}
- \begin{column}{0.45\textwidth}
-         \includegraphics[height=7.5cm]{./pics/simpsons/comm_kent_brockman.png}
- \end{column}
- \begin{column}{0.45\textwidth}
-    \begin{block}{Press officer}
-        \begin{itemize}
-            \item Watches everything
-            \item Generates charts and dashboards
-        \end{itemize}
-    \end{block}
- \end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}
-\frametitle{Authorisation: Example}
-\begin{columns}
- \begin{column}{0.45\textwidth}
-         \includegraphics[height=7.5cm]{./pics/simpsons/police_Wiggum_Clancy.png}
- \end{column}
- \begin{column}{0.45\textwidth}
-    \begin{block}{Security officer}
-        \begin{itemize}
-            \item Regulates the processes
-            \item Can have a look on everything 
-        \end{itemize}
-    \end{block}
- \end{column}
-\end{columns}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Authorisation: Example}
-\begin{columns}
- \begin{column}{0.45\textwidth}
-         \includegraphics[height=7.5cm]{./pics/simpsons/homer.png}
- \end{column}
- \begin{column}{0.45\textwidth}
-    \begin{block}{The support engineer}
-        \begin{itemize}
-            \item Can only sees and answers users requests
-        \end{itemize}
-    \end{block}
- \end{column}
-\end{columns}
-\end{frame}
-
-
-
-\begin{frame}
-\frametitle{Authorisation: Profile}
-\begin{columns}
- \begin{column}{0.45\textwidth}
-         \includegraphics[height=4.5cm]{./pics/entites-ppl.png}
- \end{column}
- \begin{column}{0.45\textwidth}
- \end{column}
-\end{columns}
-\end{frame}
 
 \section{Service Desk}
 
@@ -801,14 +608,404 @@ Let's take an example.
 \includegraphics[height=3.5cm]{./pics/report1.png}
 \end{frame}
 
-\section{What else}
+\begin{frame}
+
+    \frametitle{Application integration}
+ \begin{columns}
+ \begin{column}{0.45\textwidth}
+         \includegraphics[height=7.5cm]{./pics/house_of_cards.jpg}
+ \end{column}
+ \begin{column}{0.45\textwidth}
+     \begin{block}{Wait, some tools are already running here! \\
+     How to interacte with them?}
+        \begin{itemize}
+            \item Webservice interface
+            \item API for updates
+            \item CSV import/export
+        \end{itemize}
+    \end{block}
+   
+ \end{column}
+\end{columns}
+\end{frame}
+
+
+
+\section{GLPI plugins}
 
 \begin{frame}
 
-    \frametitle{What Else?}
+    \frametitle{The GLPI ecosystem}
+
+ \begin{columns}
+ \begin{column}{0.45\textwidth}
+         \includegraphics[height=7.5cm]{./pics/ecosystem.jpg}
+ \end{column}
+ \begin{column}{0.65\textwidth}
+    \begin{block}{The ecosystem}
+        \begin{itemize}
+            \item A central interface 
+            \item A central DB (CMDB)
+            \item Various tools to collect information 
+            \item Additional features
+        \end{itemize}
+    \end{block}
+
+ \end{column}
+\end{columns}
+
+\end{frame}
 
 
-\includegraphics[height=7.5cm]{./pics/whatelse.jpg}
+
+
+\begin{frame}
+
+    \frametitle{\textbf{There Is \sout{An App} A Awesome Plugin For That!}}
+
+ \begin{columns}
+ \begin{column}{0.45\textwidth}
+         \includegraphics[height=7.5cm]{./pics/plugin.jpg}
+ \end{column}
+ \begin{column}{0.65\textwidth}
+    \begin{block}{A large collection of \\
+    extensions}
+        \begin{itemize}
+            \item Add load of new features
+            \item Tight integration in GLPI
+            \item Powerfull API
+        \end{itemize}
+    \end{block}
+
+ \end{column}
+\end{columns}
+
+\end{frame}
+
+
+
+\begin{frame}
+
+
+    \frametitle{\textbf{There Is \sout{An App} A Plugin For That!}}
+
+ \begin{columns}
+ \begin{column}{0.45\textwidth}
+         \includegraphics[height=7.5cm]{./pics/nyancat.jpg}
+         %\includegraphics[height=7.5cm]{./pics/ecosystem.jpg}
+ \end{column}
+ \begin{column}{0.65\textwidth}
+ \end{column}
+\end{columns}
+
+\end{frame}
+
+
+
+\begin{frame}
+
+    \frametitle{\textbf{There Is \sout{An App} A Plugin For That!}}
+
+ \begin{columns}
+ \begin{column}{0.45\textwidth}
+         \includegraphics[height=7.5cm]{./pics/nyancat.jpg}
+         %\includegraphics[height=7.5cm]{./pics/ecosystem.jpg}
+ \end{column}
+ \begin{column}{0.65\textwidth}
+    \begin{block}{Plugins: Rules of Engagement}
+        \begin{itemize}
+            \item External contribution
+            \item Not endorsed by the GLPI Project
+            \item Depends on a given version of GLPI
+            \pause
+            \item \textbf{Take care on the plugin origin} 
+        \end{itemize}
+    \end{block}
+
+ \end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{plugin: Mobile}
+ \begin{columns}
+ \begin{column}{0.55\textwidth}
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/mobile.jpg}GLPI for mobile devices}
+        \begin{itemize}
+            \item iPhone/iPad
+            \item Android
+            \item Blackberry
+            \item Windows Phone
+        \end{itemize}
+        GLPI 0.78 only for the moment.
+    \end{block}
+
+ \end{column}
+ \begin{column}{0.1\textwidth}
+ \end{column}
+    \includegraphics[height=3.5cm]{./pics/mobile/central.jpg}
+
+\end{columns}
+
+
+
+\end{frame}
+\begin{frame}
+    \frametitle{plugin: Mobile}
+
+ \begin{columns}
+\begin{column}{0.5\textwidth}
+   \includegraphics[height=3.5cm]{./pics/mobile/computers.jpg}
+ \end{column}
+
+ \begin{column}{0.5\textwidth}
+   \includegraphics[height=3.5cm]{./pics/mobile/computers_tablet.jpg}
+ \end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{plugin: Mobile}
+
+ \begin{columns}
+ \begin{column}{0.5\textwidth}
+ \includegraphics[height=3.5cm]{./pics/mobile/volumes_detail_tablet.jpg}
+ \end{column}
+ \begin{column}{0.5\textwidth}
+   \includegraphics[height=3.5cm]{./pics/mobile/inventory.jpg}
+ \end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{plugin: Mobile}
+
+ \begin{columns}
+ \begin{column}{0.5\textwidth}
+    \includegraphics[height=3.5cm]{./pics/mobile/computer_detail_tablet.jpg}
+ \end{column}
+ \begin{column}{0.5\textwidth}
+   \includegraphics[height=3.5cm]{./pics/mobile/options.jpg}
+ \end{column}
+\end{columns}
+
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{plugin: OCSNG}
+
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/ocsinventory.jpg} OCS Inventory NG import}
+        \begin{itemize}
+            \item Import your computer from a OCS Inventory database 
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{plugin: FusionInventory}
+
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/fusioninventory.jpg} FusionInventory}
+        \begin{itemize}
+            \item Import your computer
+            \item Identify and import remote devices (switch, printer, ..)
+            \item vCenter/ESX/ESXi remote inventory
+            \item Wake on LAN
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{plugin: Multi-GLPI}
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/multiglpi.jpg} Multi-GLPI}
+        Allow various multi-GLPI configuration.
+        \begin{itemize}
+            \item Master - Master GLPI
+            \item Master - Master - Slaver - Slave
+            \item ...
+        \end{itemize}
+    \end{block}
+
+
+\WorkInProgress
+\end{frame}
+
+\begin{frame}
+    \frametitle{plugin: Multi-GLPI}
+
+    \includegraphics[height=7.5cm]{./pics/multiglpi/multiGLPi.jpg}
+    
+
+
+
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{plugin: Monitoring}
+    
+    \begin{block}{Monitoring}
+        Integration with Shinken monitoring solution.
+        \begin{itemize}
+            \item Define your service directly from GLPI.
+            \item Device dependency.
+            \item Display the alert.
+            \item Create ticket on alert.
+        \end{itemize}
+    \end{block}
+\WorkInProgress
+\end{frame}
+
+\begin{frame}
+    \frametitle{plugin: PDF}
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/pdf.jpg} PDF}
+        \begin{itemize}
+            \item PDF export of a given item inventory 
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{plugin: Behaviors}
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/behaviors.jpg} Behaviors}
+        Additional behaviors to GLPI.
+        \begin{itemize}
+            \item helpdesk (ticket own changes, ticket number format, etc)
+            \item Inventory management
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{plugin: Order}
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/order.jpg} Order}
+        Order management 
+        \begin{itemize}
+            \item Manage your order
+            \item Products references management
+            \item Validation workflow
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{plugin: Appliance}
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/appliance.jpg} Appliance}
+        Create element from a group of several item.
+        \begin{itemize}
+            \item Any kind of item 
+            \item Use them as any generic object 
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{plugin: Account Inventory}
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/account.jpg} Account Inventory}
+        Manage and share the credentials between users.
+        \begin{itemize}
+            \item Attach a credential information to an item 
+            \item Credential expiration
+            \item Mail system to check identity
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{plugin: Human Resources Management}
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/human.jpg} Human Resources Management}
+        Trace user/assets affectation. eg: \\ 
+        \small{This engineer is in the company for 3 months and we gave him 1 laptop and 1 screen. We need to remember to ask them back.}
+    \end{block}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{plugin: Reports}
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/reports.jpg} Reports}
+        Additional reports. It also allow you to add new reports in a simply way.
+        \begin{itemize}
+            \item Create your own reports
+            \item A collection of ready to use reports
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{plugin: WebService}
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/webservice.jpg} WebService}
+        Generic WebService interface for:
+        \begin{itemize}
+            \item SOAP 
+            \item XML/RPC
+            \item REST
+        \end{itemize}
+        Can be used by other plugins to expose additional services.
+    \end{block}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{plugin: Manufacturers Web Imports}
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/manufacturer.jpg} Manufacturers Web Imports}
+        Imports financials and warranty informations directly from manufacturers web site.
+        \begin{itemize}
+            \item Dell 
+            \item HP
+            \item Toshiba
+            \item Fujitsu-Siemens 
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{plugin: Web Application}
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/webapp.jpg} WebApplication}
+        List your Web applications of your network and associate them with elements of the inventory.
+    \end{block}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{plugin: Appliance}
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/webapp.jpg} WebApplication}
+        List your Web applications of your network and associate them with elements of the inventory.
+    \end{block}
 
 \end{frame}
 
@@ -824,6 +1021,38 @@ Let's take an example.
     \end{block}
 
 \end{frame}
+
+
+
+\section{What else}
+
+\begin{frame}
+
+    \frametitle{What Else?}
+
+
+\includegraphics[height=7.5cm]{./pics/whatelse.jpg}
+
+\end{frame}
+
+
+
+\begin{frame}
+
+    \frametitle{GLPI}
+
+    \begin{block}{A nonprofit organisation}
+        \begin{itemize}
+            \item Indepnet, a french nonprofit association
+            \item Since 2002
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+
+
+
 
 \begin{frame}
 
@@ -869,33 +1098,6 @@ Let's take an example.
 
 \end{frame}
 
-\begin{frame}
-
-    \frametitle{FusionInventory}
-
-    \begin{block}{A sister project}
-        \begin{itemize}
-            \item Created by some people of the GLPI community
-            \item Strong relationship with GLPI
-        \end{itemize}
-    \end{block}
-\pause
-    \begin{block}{A community}
-        \begin{itemize}
-            \item More than 10 people involved and growing!
-            \item Supported by 2 companies
-        \end{itemize}
-    \end{block}
-\pause
-    \begin{block}{But also}
-        \begin{itemize}
-            \item Open minded : other projects are welcomed!
-            \item Agent already used by third party projects
-        \end{itemize}
-    \end{block}
-
-\end{frame}
-
 \section{Questions}
 
 \begin{frame}
@@ -915,10 +1117,10 @@ Let's take an example.
                 \item Printer: \url{http://www.flickr.com/photos/photofarmer/467241015/}
                 \item House of cards: \url{http://www.flickr.com/photos/gibbons/2294375187/in/photostream/}
                 \item Sercice desk: \url{http://www.flickr.com/photos/cushinglibrary/4770917261/}
+                \item Ecosystem: \url{http://www.fotopedia.com/items/picasaweb-5521382965365467090}
         \end{itemize}
 
 \end{frame}
-
 
 
 \end{document}
