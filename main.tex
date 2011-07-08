@@ -114,6 +114,18 @@ Gonéri Le Bouder \texttt{<goneri@teclib.com>}}
 
 \end{frame}
 
+\begin{frame}
+    \frametitle{The project workflow}
+    %%-------------------------------------------------------------------
+    %%\logo{\includegraphics[height=3.5cm]{./pics/glpi-doc.png}}
+    FusionInventory is a community-driven project.
+
+    \begin{itemize}
+        \item active mailing lists
+        \item IRC: \#FusionInventory on FreeNode
+        \item public Forge, Git repositories, etc
+    \end{itemize}
+\end{frame}
 
 
 \section{Overview}
@@ -127,38 +139,36 @@ Gonéri Le Bouder \texttt{<goneri@teclib.com>}}
 
 \end{frame}
 
-\section{FusionInventory REMOVED}
-
+%%
+%\begin{frame}
+%    \frametitle{Agent history}
 %
-\begin{frame}
-    \frametitle{Agent history}
+%    \begin{center}
+%    \includegraphics[height=3.5cm]{./pics/agent-smith.jpg}
+%    \end{center}
+%
+%
+%    \begin{itemize}
+%        \item a fork of OCS Inventory UNIX agent by its author
+%        \item started 5 years ago
+%        \item GPLv2
+%    \end{itemize}
+%\end{frame}
 
-    \begin{center}
-    \includegraphics[height=3.5cm]{./pics/agent-smith.jpg}
-    \end{center}
-
-
-    \begin{itemize}
-        \item a fork of OCS Inventory UNIX agent by its author
-        \item started 5 years ago
-        \item GPLv2
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \begin{center}
-    \includegraphics[height=4.0cm]{pics/Perl_Foundation.pdf}
-    \end{center}
-    \frametitle{use Perl Luke!}
-
-    We choose to use Perl on the agent side.
-    \begin{itemize}
-        \item portable
-        \item reliable
-        \item versatile
-        \item stable API
-    \end{itemize}
-\end{frame}
+%\begin{frame}
+%    \begin{center}
+%    \includegraphics[height=4.0cm]{pics/Perl_Foundation.pdf}
+%    \end{center}
+%    \frametitle{use Perl Luke!}
+%
+%    We choose to use Perl on the agent side.
+%    \begin{itemize}
+%        \item portable
+%        \item reliable
+%        \item versatile
+%        \item stable API
+%    \end{itemize}
+%\end{frame}
 
 %\begin{frame}
 %    \frametitle{Agent pull}
@@ -195,25 +205,6 @@ Gonéri Le Bouder \texttt{<goneri@teclib.com>}}
         \item Wake On Lan
         \item ...
     \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{The inventories}
-
-    \begin{description}
-        \item[BIOS] serial numbers, UUID, ... local
-        \item[Memory] memory slot, size, ...
-        \item[CPU] frequency, name, manufacturer, ...
-        \item[Software] apt-get, yum, Windows software, BSD pkg, ...
-        \item[Harddrive] serial number, manufacturer, ...
-        \item[Partition] ...
-        \item[Virtual Machine] libvirt, xen, ...
-        \item[USB devices] phone, USB key, ...
-        \item[...] \href{http://search.cpan.org/dist/FusionInventory-Agent/lib/FusionInventory/Agent/XML/Query/Inventory.pm}{see the list on Internet.}
-    \end{description}
-
-    It's easy to add new information. Just ask us or submit patches!
-
 \end{frame}
 
 \begin{frame}
@@ -399,7 +390,6 @@ Gonéri Le Bouder \texttt{<goneri@teclib.com>}}
 
 \section{The project}
 
-\subsection{History}
 \begin{frame}
     \frametitle{A long long time ago}
 
@@ -423,22 +413,6 @@ Gonéri Le Bouder \texttt{<goneri@teclib.com>}}
     \begin{center}
     \includegraphics[height=6.5cm]{./pics/fusinv.pdf}
     \end{center}
-\end{frame}
-
-
-\subsection{Community}
-
-\begin{frame}
-    \frametitle{The project workflow}
-    %%-------------------------------------------------------------------
-    %%\logo{\includegraphics[height=3.5cm]{./pics/glpi-doc.png}}
-    FusionInventory is a community-driven project.
-
-    \begin{itemize}
-        \item active mailing lists
-        \item IRC: \#FusionInventory on FreeNode
-        \item public Forge, Git repositories, etc
-    \end{itemize}
 \end{frame}
 
 
@@ -567,6 +541,28 @@ Gonéri Le Bouder \texttt{<goneri@teclib.com>}}
 \section{Installation}
 
 \section{Inventory}
+
+\begin{frame}
+
+    \frametitle{The inventories}
+
+    \begin{description}
+        \item[BIOS] serial numbers, UUID, ... local
+        \item[Memory] memory slot, size, ...
+        \item[CPU] frequency, name, manufacturer, ...
+        \item[Software] apt-get, yum, Windows software, BSD pkg, ...
+        \item[Harddrive] serial number, manufacturer, ...
+        \item[Partition] ...
+        \item[Virtual Machine] libvirt, xen, ...
+        \item[USB devices] phone, USB key, ...
+        \item[...] \href{http://search.cpan.org/dist/FusionInventory-Agent/lib/FusionInventory/Agent/XML/Query/Inventory.pm}{see the list on Internet.}
+    \end{description}
+
+    It's easy to add new information. Just ask us or submit patches!
+
+\end{frame}
+
+
 
 \section{Network Discovery}
 
