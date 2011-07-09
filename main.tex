@@ -289,31 +289,6 @@
 
 \end{frame}
 
-\begin{frame}
-
-    \frametitle{Computer}
- \begin{columns}
- \begin{column}{0.15\textwidth}
-         \includegraphics[height=8.5cm]{./pics/os.pdf}
- \end{column}
-
- Use an system inventory solution.
- \begin{column}{1.25\textwidth}
-    \begin{block}{Easy step}
-        \begin{itemize}
-            \item FusionInventory
-            \item OCS Inventory
-        \end{itemize}
-    \end{block}
-
-
- \end{column}
-\end{columns}
-
-
-
-
-\end{frame}
 
 \begin{frame}
 
@@ -727,30 +702,7 @@
 
 \end{frame}
 
-\begin{frame}
-    \frametitle{plugin: Mobile}
- \begin{columns}
- \begin{column}{0.55\textwidth}
-    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/mobile.jpg}GLPI for mobile devices}
-        \begin{itemize}
-            \item iPhone/iPad
-            \item Android
-            \item Blackberry
-            \item Windows Phone
-        \end{itemize}
-        GLPI 0.78 only for the moment.
-    \end{block}
 
- \end{column}
- \begin{column}{0.1\textwidth}
- \end{column}
-    \includegraphics[height=3.5cm]{./pics/mobile/central.jpg}
-
-\end{columns}
-
-
-
-\end{frame}
 \begin{frame}
     \frametitle{plugin: Mobile}
 
@@ -797,18 +749,6 @@
 
 
 \begin{frame}
-    \frametitle{plugin: OCSNG}
-
-    
-    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/ocsinventory.jpg} OCS Inventory NG import}
-        \begin{itemize}
-            \item Import and synchronize computers from a OCS Inventory database 
-        \end{itemize}
-    \end{block}
-
-\end{frame}
-
-\begin{frame}
     \frametitle{plugin: FusionInventory}
 
     
@@ -824,21 +764,6 @@
 \end{frame}
 
 
-\begin{frame}
-    \frametitle{plugin: Multi-GLPI}
-    
-    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/multiglpi.jpg} Multi-GLPI}
-        Synchronize serveral GLPI together.
-        \begin{itemize}
-            \item Master $\Longleftrightarrow$ Master GLPI
-            \item Master $\Longleftrightarrow$ Master $\Longrightarrow$ Slaver $\Longrightarrow$ Slave
-            \item ...
-        \end{itemize}
-    \end{block}
-
-
-\WorkInProgress
-\end{frame}
 
 \begin{frame}
     \frametitle{plugin: Multi-GLPI}
@@ -851,21 +776,6 @@
 \end{frame}
 
 
-
-\begin{frame}
-    \frametitle{plugin: Monitoring}
-    
-    \begin{block}{Monitoring}
-        Integration with Shinken monitoring solution.
-        \begin{itemize}
-            \item Define your services directly into GLPI.
-            \item Device dependency.
-            \item Display the alert.
-            \item Create ticket on alert.
-        \end{itemize}
-    \end{block}
-\WorkInProgress
-\end{frame}
 
 \begin{frame}
     \frametitle{plugin: PDF}
@@ -934,6 +844,16 @@
 
 \end{frame}
 
+\begin{frame}
+    \frametitle{plugin: Web Application}
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/webapp.jpg} WebApplication}
+        List web applications on your network and associate them with elements of the inventory.
+    \end{block}
+
+\end{frame}
+
+
 
 \begin{frame}
     \frametitle{plugin: Human Resources Management}
@@ -959,6 +879,46 @@
 
 \end{frame}
 
+
+\begin{frame}
+    \frametitle{plugin: Mobile}
+ \begin{columns}
+ \begin{column}{0.55\textwidth}
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/mobile.jpg}GLPI for mobile devices}
+        \begin{itemize}
+            \item iPhone/iPad
+            \item Android
+            \item Blackberry
+            \item Windows Phone
+        \end{itemize}
+        GLPI 0.78 only for the moment.
+    \end{block}
+
+ \end{column}
+ \begin{column}{0.1\textwidth}
+ \end{column}
+    \includegraphics[height=3.5cm]{./pics/mobile/central.jpg}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{plugin: Manufacturers Web Imports}
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/manufacturer.jpg} Manufacturers Web Imports}
+        Imports financials and warranty informations directly from manufacturers web site.
+        \begin{itemize}
+            \item Dell 
+            \item HP
+            \item Toshiba
+            \item Fujitsu-Siemens 
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+
+
 \begin{frame}
     \frametitle{plugin: WebService}
     
@@ -976,28 +936,50 @@
 
 
 \begin{frame}
-    \frametitle{plugin: Manufacturers Web Imports}
+    \frametitle{plugin: Monitoring}
     
-    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/manufacturer.jpg} Manufacturers Web Imports}
-        Imports financials and warranty informations directly from manufacturers web site.
+    \begin{block}{Monitoring}
+        Integration with Shinken monitoring solution.
         \begin{itemize}
-            \item Dell 
-            \item HP
-            \item Toshiba
-            \item Fujitsu-Siemens 
+            \item Define your services directly into GLPI.
+            \item Device dependency.
+            \item Display the alert.
+            \item Create ticket on alert.
+        \end{itemize}
+    \end{block}
+\WorkInProgress
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{plugin: Multi-GLPI}
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/multiglpi.jpg} Multi-GLPI}
+        Synchronize serveral GLPI together.
+        \begin{itemize}
+            \item Master $\Longleftrightarrow$ Master GLPI
+            \item Master $\Longleftrightarrow$ Master $\Longrightarrow$ Slaver $\Longrightarrow$ Slave
+            \item ...
+        \end{itemize}
+    \end{block}
+
+
+\WorkInProgress
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{plugin: OCSNG}
+
+    
+    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/ocsinventory.jpg} OCS Inventory NG import}
+        \begin{itemize}
+            \item Import and synchronize computers from a OCS Inventory database 
         \end{itemize}
     \end{block}
 
 \end{frame}
 
-\begin{frame}
-    \frametitle{plugin: Web Application}
-    
-    \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/webapp.jpg} WebApplication}
-        List web applications on your network and associate them with elements of the inventory.
-    \end{block}
-
-\end{frame}
 
 
 \begin{frame}
@@ -1031,6 +1013,29 @@
         \end{itemize}
     \end{block}
 
+\end{frame}
+
+
+\begin{frame}
+
+    \frametitle{Computer}
+ \begin{columns}
+ \begin{column}{0.15\textwidth}
+         \includegraphics[height=8.5cm]{./pics/os.pdf}
+ \end{column}
+
+ Use an system inventory solution.
+ \begin{column}{1.25\textwidth}
+    \begin{block}{Easy step}
+        \begin{itemize}
+            \item FusionInventory
+            \item OCS Inventory
+        \end{itemize}
+    \end{block}
+
+
+ \end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}
