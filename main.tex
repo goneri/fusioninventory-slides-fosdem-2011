@@ -645,7 +645,7 @@
     \begin{block}{The ecosystem}
         \begin{itemize}
             \item A central interface 
-            \item A central DB (CMDB)
+            \item A configuration database (CMDB)
             \item Various tools to collect information 
             \item Additional features
         \end{itemize}
@@ -661,7 +661,7 @@
 
 \begin{frame}
 
-    \frametitle{\textbf{There Is \sout{An App} A Awesome Plugin For That!}}
+    \frametitle{\textbf{There is \sout{an app} a awesome plugin for that!}}
 
  \begin{columns}
  \begin{column}{0.45\textwidth}
@@ -687,7 +687,7 @@
 \begin{frame}
 
 
-    \frametitle{\textbf{There Is \sout{An App} A Plugin For That!}}
+    \frametitle{\textbf{There is \sout{an app} a plugin for that!}}
 
  \begin{columns}
  \begin{column}{0.45\textwidth}
@@ -704,7 +704,7 @@
 
 \begin{frame}
 
-    \frametitle{\textbf{There Is \sout{An App} A Plugin For That!}}
+    \frametitle{\textbf{There is \sout{an app} a plugin for that!}}
 
  \begin{columns}
  \begin{column}{0.45\textwidth}
@@ -802,7 +802,7 @@
     
     \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/ocsinventory.jpg} OCS Inventory NG import}
         \begin{itemize}
-            \item Import your computer from a OCS Inventory database 
+            \item Import and synchronize computers from a OCS Inventory database 
         \end{itemize}
     \end{block}
 
@@ -815,8 +815,8 @@
     \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/fusioninventory.jpg} FusionInventory}
         \begin{itemize}
             \item Import your computer
-            \item Identify and import remote devices (switch, printer, ..)
-            \item vCenter/ESX/ESXi remote inventory
+            \item Identify and import remote devices (switchs, printers, ..)
+            \item VMware vCenter/ESX/ESXi remote inventory
             \item Wake on LAN
         \end{itemize}
     \end{block}
@@ -828,7 +828,7 @@
     \frametitle{plugin: Multi-GLPI}
     
     \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/multiglpi.jpg} Multi-GLPI}
-        Allow various multi-GLPI configuration.
+        Synchronize serveral GLPI together.
         \begin{itemize}
             \item Master $\Longleftrightarrow$ Master GLPI
             \item Master $\Longleftrightarrow$ Master $\Longrightarrow$ Slaver $\Longrightarrow$ Slave
@@ -858,7 +858,7 @@
     \begin{block}{Monitoring}
         Integration with Shinken monitoring solution.
         \begin{itemize}
-            \item Define your service directly from GLPI.
+            \item Define your services directly into GLPI.
             \item Device dependency.
             \item Display the alert.
             \item Create ticket on alert.
@@ -872,7 +872,7 @@
     
     \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/pdf.jpg} PDF}
         \begin{itemize}
-            \item PDF export of a given item inventory 
+            \item PDF export of a given inventory item
         \end{itemize}
     \end{block}
 
@@ -940,7 +940,7 @@
     
     \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/human.jpg} Human Resources Management}
         Trace user/assets affectation. eg: \\ 
-        \small{This engineer is in the company for 3 months and we gave him 1 laptop and 1 screen. We need to remember to ask them back.}
+        \small{This engineer is in the company for 3 months and we gave him 1 laptop and 1 screen. We need to remember to get them back.}
     \end{block}
 
 \end{frame}
@@ -994,7 +994,7 @@
     \frametitle{plugin: Web Application}
     
     \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/webapp.jpg} WebApplication}
-        List your Web applications of your network and associate them with elements of the inventory.
+        List web applications on your network and associate them with elements of the inventory.
     \end{block}
 
 \end{frame}
@@ -1005,6 +1005,39 @@
     
     \begin{block}{\includegraphics[height=0.5cm]{./pics/plugins/webapp.jpg} WebApplication}
         List your Web applications of your network and associate them with elements of the inventory.
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+
+    \frametitle{Newest features}
+
+    \begin{block}{GLPI 0.80}
+        \begin{itemize}
+            \item SLA
+            \item User satisfaction 
+            \item Link between ticket solution and knowledge base 
+            \item Multiple requesters, observers for a ticket
+            \item Multiple technician, group and supplier assignement for a ticket
+            \item Virtual machines management 
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}
+
+    \frametitle{Newest features}
+
+    \begin{block}{GLPI 0.83}
+        \begin{itemize}
+            \item ITIL level 1 compliant until late 2011
+            \item Problem management
+            \item Change management
+            \item Many more helpdesk improvements !
+            \item OCSNG Mode available as a plugin
+        \end{itemize}
     \end{block}
 
 \end{frame}
