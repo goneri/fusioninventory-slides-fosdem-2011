@@ -228,70 +228,20 @@ Gonéri Le Bouder \texttt{<goneri@teclib.com>}}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Network discovery}
+    \frametitle{Servers today}
 
-    FusionInventory can do basic network inventory in GLPI
-    \begin{block}{Seek}
-    \begin{itemize}
-      \item nmap
-      \item netbios
-      \item SNMP query
-    \end{itemize}
-    \end{block}
-    \begin{block}{Identify}
-    \begin{itemize}
-        \item network stack
-        \item Windows domain information
-        \item sysdesc comparaison
-    \end{itemize}
-    \end{block}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Remote SNMP inventory}
-
-    \begin{block}{Network devices}
+    \begin{block}{4 different servers (so far!)}
         \begin{itemize}
-            \item serial number, firmware, ...
-            \item ports mapping
+            \item FusionInventory for GLPI \\
+            \url{http://www.FusionInventory.org}
+            \item Uranos \\
+            \url{http://uranos.sourceforge.net/}
+            \item Rudder \\
+            \url{http://www.normation.com/\#produits}
+            \item OCS Inventory NG (patched to ignore the UserAgent filter) \\
+            \url{http://forge.fusioninventory.org/projects/fusioninventory-agent/wiki/Patch\_ocs\_server}
         \end{itemize}
-    \end{block}
-
-    \begin{block}{Network printers}
-        \begin{itemize}
-            \item serial number, firmware, ...
-            \item cartridge ink level
-            \item page counter
-        \end{itemize}
-    \end{block}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Wake on LAN}
-
-    \begin{block}{What?}
-    \begin{itemize}
-        \item awake computer.
-    \end{itemize}
-    \end{block}
-
-\pause
-
-    \begin{block}{How?}
-    send the Magic Packet from an agent in the same network
-    \begin{itemize}
-        \item send raw ethernet packet
-        \item UDP packet still possible
-    \end{itemize}
-    \end{block}
-
-\pause
-
-    \begin{block}{Benefit}
-    \begin{itemize}
-        \item no firewall issue
-        \item nor special routage rule needed
-    \end{itemize}
+        ...local mode is also possible for Inventory
     \end{block}
 
 \end{frame}
@@ -299,130 +249,6 @@ Gonéri Le Bouder \texttt{<goneri@teclib.com>}}
 
 %\subsection{Use cases}
 %\include{purpose}
-
-\section{The project}
-
-
-\begin{frame}
-    \frametitle{What else? (1/2)}
-
-    \begin{center}
-    \includegraphics[height=4.0cm]{pics/whatelse.jpg}
-    \end{center}
-
-    \pause
-
-    \begin{block}{agent developement is very active}
-        \begin{itemize}
-            \item code clean up\\
-            {\small larger test-suite, modern perl}
-            \item architecture changes\\
-            {\small event-driven programming, various executable}
-            \item smaller memory footprint
-        \end{itemize}
-    \end{block}
-\end{frame}
-
-\begin{frame}
-    \frametitle{What else? (2/2)}
-
-    \begin{center}
-    \includegraphics[height=4.0cm]{pics/whatelse.jpg}
-    \end{center}
-
-    \begin{block}{In test-suite we trust!}
-        \begin{itemize}
-            \item strong effort done during the last year \\
-            \small{36 800 tests on the GLPI plugin and up to 2 000 on the agent}
-            \item with even stronger benefit so far
-        \end{itemize}
-    \end{block}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Our roadmap}
-
-    What we are about to release
-    \begin{itemize}
-    \item FusionInventory for GLPI 0.78: beta planned for this month
-    \item ESX inventory: before june
-    \item Android Agent
-    \end{itemize}
-
-    Work in progress
-    \begin{itemize}
-    \item Software deployment
-    \item OCS/XML → REST/JSON transition
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{FusionInventory for GLPI 0.78: Action scheduler 1/2}
-    \includegraphics[height=7.5cm]{pics/fusion_task.pdf}
-\end{frame}
-
-\begin{frame}
-\frametitle{FusionInventory for GLPI 0.78: Action scheduler 2/2}
-    \includegraphics[height=7.5cm]{pics/walid_task_1.png}
-\end{frame}
-
-\begin{frame}
-\frametitle{FusionInventory for GLPI 0.78: Printer graph}
-    \includegraphics[height=7.5cm]{pics/walid_printer_2.png}
-\end{frame}
-%
-
-
-
-\begin{frame}
-\frametitle{ESX 1/2}
-
-
-   \includegraphics[height=5cm]{./pics/esx1.png}
-\end{frame}
-%
-\begin{frame}
-\frametitle{ESX 2/2}
-
-
-   \includegraphics[height=5cm]{./pics/esx2.png}
-\end{frame}
-
-%\begin{frame}
-%\frametitle{OCS/XML → REST/JSON transition}
-%
-%\begin{block}{Why}
-%    \begin{itemize}
-%    \item non standard protocol
-%    \begin{itemize}
-%    \item unhard to extend: parameters send once whatever you do
-%    \item odd XML structure to parse
-%    \item hard to extend
-%    \end{itemize}
-%    \item more modern alternative nowaday
-%    \begin{itemize}
-%    \item REST
-%    \item JSON
-%    \end{itemize}
-%    \end{itemize}
-%\end{block}
-%
-% \begin{block}{How this will be achieved}
-%    \begin{itemize}
-%    \item Long transition with dual system
-%    \item keep OCS inventory compatibiliy
-%    \end{itemize}
-%\end{block}
-
-%\end{frame}
-
-\begin{frame}
-    \frametitle{Demo}
-
-   \includegraphics[height=5cm]{./pics/fusinvglpi.png}
-
-    \bf{Demo time!}
-\end{frame}
 
 
 \section{Installation}
@@ -493,24 +319,109 @@ Gonéri Le Bouder \texttt{<goneri@teclib.com>}}
 \includegraphics[height=0.5cm]{pics/logos/mageia.png}
 
 \end{frame}
+
+
 \begin{frame}
-    \frametitle{Server: Ok which one?}
+    \frametitle{Agent: Tested systems}
 
-    \begin{block}{4 different servers (so far!)}
+    \begin{block}{Linux}
         \begin{itemize}
-            \item FusionInventory for GLPI \\
-            \url{http://www.FusionInventory.org}
-            \item Uranos \\
-            \url{http://uranos.sourceforge.net/}
-            \item Rudder \\
-            \url{http://www.normation.com/\#produits}
-            \item OCS Inventory NG (patched to ignore the UserAgent filter) \\
-            \url{http://forge.fusioninventory.org/projects/fusioninventory-agent/wiki/Patch\_ocs\_server}
+            \item \textbf{Debian} all since 3.1
+            \item \textbf{Ubuntu} all since 8.04
+            \item \textbf{Mandriva} 2007.1, 2010.0, 2010.1
+            \item \textbf{MandrakeLinux} 9.2, 10.2
+            \item \textbf{Slackware} 10 to 13
+            \item \textbf{Fedora} all since the 2nd
+            \item \textbf{RedHat Linux} 7.0, 8.0 and 9.0
+            \item \textbf{RedHat Enterprise Linux} (or CentOS) all since 3
+            \item \textbf{SME Server} 7.5
+            \item \textbf{OpenSUSE} 11.3
+            \item \textbf{Gentoo} 1.6.14, 2008
+            \item \textbf{Montavista} 4.0 
+            \item \textbf{SUSE Linux Enterprise Server} 10, 11 
         \end{itemize}
-        ...local mode is also possible for Inventory
     \end{block}
-
 \end{frame}
+
+\begin{frame}
+    \frametitle{Agent: Tested systems}
+
+    \begin{block}{Windows}
+        \begin{itemize}
+            \item \textbf{Windows 2000} $\geq$ SP4
+            \item \textbf{Windows XP} all
+            \item \textbf{Windows 2003} all
+            \item \textbf{Windows 2008} all
+            \item \textbf{Windows Vista} all
+            \item \textbf{Windows Seven} all
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Agent: Tested systems}
+
+    \begin{block}{MacOSX}
+        \begin{itemize}
+            \item \textbf{Panther} 10.3.9 PowerPC
+            \item \textbf{Tiger} all 
+            \item \textbf{Leopard} all
+            \item \textbf{Snow Leopard} all
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Agent: Tested systems}
+
+    \begin{block}{Solaris}
+        \begin{itemize}
+            \item \textbf{Solaris} 8 to 10 for SPARC and 10 to 11 for x86
+            \item \textbf{OpenSolaris} 2009.06
+            \item \textbf{OpenIndiana} oi\_148
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Agent: Tested systems}
+
+    \begin{block}{BSD}
+        \begin{itemize}
+            \item \textbf{OpenBSD} 4.5 to 4.8
+            \item \textbf{FreeBSD} all since 5.3 include Debian GNU/kFreeBSD
+            \item \textbf{NetBSD} 5.0 and 5.1
+            \item \textbf{DragonflyBSD} 2.8
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Agent: Tested systems}
+
+    \begin{block}{HPUX}
+        \begin{itemize}
+            \item \textbf{11.11} PA-RISC
+            \item \textbf{11.23} Itanium
+            \item \textbf{11.31} Itanium
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Agent: Tested systems}
+
+    \begin{block}{AIX}
+        \begin{itemize}
+            \item \textbf{5.1}
+            \item \textbf{5.2}
+            \item \textbf{6.1}
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
 
 \begin{frame}
     \frametitle{Agent: Installation}
@@ -933,7 +844,48 @@ This section presents the XML structure used by FusionInventory.
 
 \section{Network Discovery}
 
+\begin{frame}
+    \frametitle{Network discovery}
+
+    FusionInventory can do basic network inventory in GLPI
+    \begin{block}{Seek}
+    \begin{itemize}
+      \item nmap
+      \item netbios
+      \item SNMP query
+    \end{itemize}
+    \end{block}
+    \begin{block}{Identify}
+    \begin{itemize}
+        \item network stack
+        \item Windows domain information
+        \item sysdesc comparaison
+    \end{itemize}
+    \end{block}
+\end{frame}
+
 \section{SNMP}
+\begin{frame}
+    \frametitle{Remote SNMP inventory}
+
+    \begin{block}{Network devices}
+        \begin{itemize}
+            \item serial number, firmware, ...
+            \item ports mapping
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{Network printers}
+        \begin{itemize}
+            \item serial number, firmware, ...
+            \item cartridge ink level
+            \item page counter
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+
 
 \begin{frame}
     \frametitle{SNMP: Goal}
@@ -1063,6 +1015,162 @@ This section presents the XML structure used by FusionInventory.
 \section{vCenter/ESX/ESXi remote inventory}
 
 \section{Wake On Line}
+
+\begin{frame}
+    \frametitle{Wake on LAN}
+
+    \begin{block}{What?}
+    \begin{itemize}
+        \item awake computer.
+    \end{itemize}
+    \end{block}
+
+\pause
+
+    \begin{block}{How?}
+    send the Magic Packet from an agent in the same network
+    \begin{itemize}
+        \item send raw ethernet packet
+        \item UDP packet still possible
+    \end{itemize}
+    \end{block}
+
+\pause
+
+    \begin{block}{Benefit}
+    \begin{itemize}
+        \item no firewall issue
+        \item nor special routage rule needed
+    \end{itemize}
+    \end{block}
+
+\end{frame}
+
+
+\section{What else?}
+
+
+\begin{frame}
+    \frametitle{What else? (1/2)}
+
+    \begin{center}
+    \includegraphics[height=4.0cm]{pics/whatelse.jpg}
+    \end{center}
+
+    \pause
+
+    \begin{block}{agent developement is very active}
+        \begin{itemize}
+            \item code clean up\\
+            {\small larger test-suite, modern perl}
+            \item architecture changes\\
+            {\small event-driven programming, various executable}
+            \item smaller memory footprint
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{What else? (2/2)}
+
+    \begin{center}
+    \includegraphics[height=4.0cm]{pics/whatelse.jpg}
+    \end{center}
+
+    \begin{block}{In test-suite we trust!}
+        \begin{itemize}
+            \item strong effort done during the last year \\
+            \small{36 800 tests on the GLPI plugin and up to 2 000 on the agent}
+            \item with even stronger benefit so far
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Our roadmap}
+
+    What we are about to release
+    \begin{itemize}
+    \item FusionInventory for GLPI 0.78: beta planned for this month
+    \item ESX inventory: before june
+    \item Android Agent
+    \end{itemize}
+
+    Work in progress
+    \begin{itemize}
+    \item Software deployment
+    \item OCS/XML → REST/JSON transition
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{FusionInventory for GLPI 0.78: Action scheduler 1/2}
+    \includegraphics[height=7.5cm]{pics/fusion_task.pdf}
+\end{frame}
+
+\begin{frame}
+\frametitle{FusionInventory for GLPI 0.78: Action scheduler 2/2}
+    \includegraphics[height=7.5cm]{pics/walid_task_1.png}
+\end{frame}
+
+\begin{frame}
+\frametitle{FusionInventory for GLPI 0.78: Printer graph}
+    \includegraphics[height=7.5cm]{pics/walid_printer_2.png}
+\end{frame}
+%
+
+
+
+\begin{frame}
+\frametitle{ESX 1/2}
+
+
+   \includegraphics[height=5cm]{./pics/esx1.png}
+\end{frame}
+%
+\begin{frame}
+\frametitle{ESX 2/2}
+
+
+   \includegraphics[height=5cm]{./pics/esx2.png}
+\end{frame}
+
+%\begin{frame}
+%\frametitle{OCS/XML → REST/JSON transition}
+%
+%\begin{block}{Why}
+%    \begin{itemize}
+%    \item non standard protocol
+%    \begin{itemize}
+%    \item unhard to extend: parameters send once whatever you do
+%    \item odd XML structure to parse
+%    \item hard to extend
+%    \end{itemize}
+%    \item more modern alternative nowaday
+%    \begin{itemize}
+%    \item REST
+%    \item JSON
+%    \end{itemize}
+%    \end{itemize}
+%\end{block}
+%
+% \begin{block}{How this will be achieved}
+%    \begin{itemize}
+%    \item Long transition with dual system
+%    \item keep OCS inventory compatibiliy
+%    \end{itemize}
+%\end{block}
+
+%\end{frame}
+
+\begin{frame}
+    \frametitle{Demo}
+
+   \includegraphics[height=5cm]{./pics/fusinvglpi.png}
+
+    \bf{Demo time!}
+\end{frame}
+
 
 \section{Questions}
 
