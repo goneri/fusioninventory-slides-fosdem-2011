@@ -936,6 +936,54 @@ This section presents the XML structure used by FusionInventory.
 \section{SNMP}
 
 \begin{frame}
+    \frametitle{SNMP: Goal}
+
+    \begin{itemize}
+    \item Identify devices remotly
+    \item Inventory devices by SNMP
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{SNMP: history}
+
+    \begin{itemize}
+    \item Created in 1992
+    \item Created for monitoring devices
+    \item Some RFC are writen to implement it with standard
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{SNMP: Why create own models}
+
+    MIB exists but
+    \begin{itemize}
+    \item Difficult to find (not for all of course)
+    \item MIB not complete
+    \item OID not always same on device (depend of model and firmware)
+    \end{itemize}
+    With models, we are sure device is very nice supported!
+\end{frame}
+
+\begin{frame}
+    \frametitle{SNMP: What is these models}
+
+    We store these informations
+    \begin{itemize}
+    \item Relation OID with information (like serial number is oid .1.3...)
+    \item Simple or dynamic OID (a serial number or name of each port)
+    \end{itemize}
+
+    How to make them?
+    \begin{itemize}
+    \item We use a complete snmpwalk of each device + model + firmware
+    \item Our tool permit to preselect and select OID 
+    \item This tool will create and export models 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
     \frametitle{SNMP: Switch specification (1/3)}
 
     Get switch informations 
